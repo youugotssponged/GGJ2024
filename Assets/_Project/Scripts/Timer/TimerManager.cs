@@ -26,5 +26,5 @@ public class TimerManager : MonoBehaviour
             Debug.Log(SceneProperties.SecondsRemaining);
         }
     }
-    
+
 }
