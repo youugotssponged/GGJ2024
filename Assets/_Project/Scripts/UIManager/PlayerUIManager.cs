@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class UIManager : MonoBehaviour
+public class PlayerUIManager : MonoBehaviour
 {
     // UI Elements
     VisualElement Root;
@@ -26,9 +26,5 @@ public class UIManager : MonoBehaviour
         SceneProperties.OnSecondsRemainingChanged += (timeRemaining) => { TimerLabel.text = timeRemaining.ToString(); Debug.Log("Timer Triggered"); };
         SceneProperties.OnCurrentScoreChanged += (currentScore) => { CurrentScoreLabel.text = currentScore.ToString(); Debug.Log("Score Triggered"); };
         SceneProperties.OnRequiredScoreChanged += (requiredScore) => { RequiredScoreLabel.text = requiredScore.ToString(); Debug.Log("Quota Triggered"); };
-    }
-    void Start()
-    {
-        
     }
 }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c973bbd9b50cc90409d522dea0f4ec55, type: 3}
   m_Name: ScenePropertiesScriptableObject
   m_EditorClassIdentifier: 
-  secondsRemaining: 500
-  currentScore: 0
-  requiredScore: 0
+  secondsRemaining: 199
+  currentScore: 2
+  requiredScore: 7
