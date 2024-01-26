@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c973bbd9b50cc90409d522dea0f4ec55, type: 3}
-  m_Name: SceneProperties
+  m_Name: ScenePropertiesScriptableObject
   m_EditorClassIdentifier: 
   secondsRemaining: 500
   currentScore: 0

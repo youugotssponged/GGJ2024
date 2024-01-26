@@ -24,8 +24,8 @@ public class UIManager : MonoBehaviour
         Debug.Log("Subscribing");
         // Sub to events for when propeties in scriptable object change.
         SceneProperties.OnSecondsRemainingChanged += (timeRemaining) => { TimerLabel.text = timeRemaining.ToString(); Debug.Log("Timer Triggered"); };
-        SceneProperties.OnCurrentScoreChanged += (currentScore) => { RequiredScoreLabel.text = currentScore.ToString(); Debug.Log("Score Triggered"); };
-        SceneProperties.OnRequiredScoreChanged += (requiredScore) => { CurrentScoreLabel.text = requiredScore.ToString(); Debug.Log("Quota Triggered"); };
+        SceneProperties.OnCurrentScoreChanged += (currentScore) => { CurrentScoreLabel.text = currentScore.ToString(); Debug.Log("Score Triggered"); };
+        SceneProperties.OnRequiredScoreChanged += (requiredScore) => { RequiredScoreLabel.text = requiredScore.ToString(); Debug.Log("Quota Triggered"); };
     }
     void Start()
     {
