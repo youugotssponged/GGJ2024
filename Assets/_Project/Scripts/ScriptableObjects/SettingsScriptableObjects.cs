@@ -5,8 +5,8 @@ using UnityEngine;
 public class SettingsScriptableObjects : ScriptableObject
 {
 
-    public delegate void VolumeChanged();
-    public static event VolumeChanged OnVolumeChanged;
+    public delegate void VolumeChanged(int volume);
+    public event VolumeChanged OnVolumeChanged;
     [SerializeField]
     private int volume = 100;
     public int Volume
@@ -15,12 +15,12 @@ public class SettingsScriptableObjects : ScriptableObject
         set
         {
             volume = value;
-            OnVolumeChanged.Invoke();
+            OnVolumeChanged.Invoke(volume);
         }
     }
 
-    public delegate void TextSpeedChanged();
-    public static event TextSpeedChanged OnTextSpeedChanged;
+    public delegate void TextSpeedChanged(int textSpeed);
+    public event TextSpeedChanged OnTextSpeedChanged;
     [SerializeField]
     private int textSpeed = 10;
     public int TextSpeed
@@ -29,7 +29,7 @@ public class SettingsScriptableObjects : ScriptableObject
         set
         {
             textSpeed = value;
-            OnTextSpeedChanged.Invoke();
+            OnTextSpeedChanged.Invoke(textSpeed);
         }
     }
 

@@ -4,8 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ScenePropertiesScriptableObject", menuName = "ScriptableObjects/ScenePropertiesScriptableObject", order = 1)]
 public class ScenePropertiesScriptableObject : ScriptableObject
 {
-    public delegate void SecondsRemainingChanged();
-    public static event SecondsRemainingChanged OnSecondsRemainingChanged;
+    public delegate void SecondsRemainingChanged(int timeRemaining);
+    public event SecondsRemainingChanged OnSecondsRemainingChanged;
     [SerializeField]
     private int secondsRemaining = 0;
     public int SecondsRemaining
@@ -14,12 +14,12 @@ public class ScenePropertiesScriptableObject : ScriptableObject
         set 
         { 
             secondsRemaining = value;
-            OnSecondsRemainingChanged.Invoke();
+            OnSecondsRemainingChanged.Invoke(secondsRemaining);
         }
     }
 
-    public delegate void CurrentScoreChanged();
-    public static event SecondsRemainingChanged OnCurrentScoreChanged;
+    public delegate void CurrentScoreChanged(int currentScore);
+    public event CurrentScoreChanged OnCurrentScoreChanged;
     [SerializeField]
     private int currentScore = 0;
     public int CurrentScore
@@ -28,12 +28,12 @@ public class ScenePropertiesScriptableObject : ScriptableObject
         set
         {
             currentScore = value;
-            OnCurrentScoreChanged.Invoke();
+            OnCurrentScoreChanged.Invoke(currentScore);
         }
     }
 
-    public delegate void RequiredScoreChanged();
-    public static event SecondsRemainingChanged OnRequiredScoreChanged;
+    public delegate void RequiredScoreChanged(int requiredScore);
+    public event RequiredScoreChanged OnRequiredScoreChanged;
     [SerializeField]
     private int requiredScore = 0;
     public int RequiredScore
@@ -42,7 +42,7 @@ public class ScenePropertiesScriptableObject : ScriptableObject
         set
         {
             requiredScore = value;
-            OnRequiredScoreChanged.Invoke();
+            OnRequiredScoreChanged.Invoke(requiredScore);
         }
     }
 }

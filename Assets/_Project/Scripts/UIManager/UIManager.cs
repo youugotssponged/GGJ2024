@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -21,21 +22,8 @@ public class UIManager : MonoBehaviour
         RequiredScoreLabel = Root.Q<Label>("RequiredScoreLabel");
 
         // Sub to events for when propeties in scriptable object change.
-        ScenePropertiesScriptableObject.OnSecondsRemainingChanged += SceneProperties_OnSecondsRemainingChanged;
-        ScenePropertiesScriptableObject.OnCurrentScoreChanged += SceneProperties_OnCurrentScoreChanged;
-        ScenePropertiesScriptableObject.OnRequiredScoreChanged += SceneProperties_OnRequiredScoreChanged;
-    }
-
-    private void SceneProperties_OnSecondsRemainingChanged()
-    {
-        TimerLabel.text = SceneProperties.SecondsRemaining.ToString();
-    }
-    private void SceneProperties_OnRequiredScoreChanged()
-    {
-        CurrentScoreLabel.text = SceneProperties.CurrentScore.ToString();
-    }
-    private void SceneProperties_OnCurrentScoreChanged()
-    {
-        RequiredScoreLabel.text = SceneProperties.RequiredScore.ToString();
+        SceneProperties.OnSecondsRemainingChanged += (timeRemaining) => TimerLabel.text = timeRemaining.ToString();
+        SceneProperties.OnCurrentScoreChanged += (currentScore) => RequiredScoreLabel.text = currentScore.ToString();
+        SceneProperties.OnRequiredScoreChanged += (requiredScore) => CurrentScoreLabel.text = requiredScore.ToString();
     }
 }
