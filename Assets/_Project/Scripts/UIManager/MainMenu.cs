@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class StartScreenUIManager : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     SettingsScriptableObject Settings;
@@ -40,7 +40,7 @@ public class StartScreenUIManager : MonoBehaviour
     private void StartButton_clicked()
     {
         // Start the game by loading the correct scene.
-        // ToDo load game scene
+        SceneManager.LoadScene("NiallMap");
     }
 
     private void SettingsButton_clicked()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PauseMenuUIManager : MonoBehaviour
@@ -51,6 +52,6 @@ public class PauseMenuUIManager : MonoBehaviour
     }
     private void ReturnToMenuButton_clicked()
     {
-        // ToDo go back to start screen
+        SceneManager.LoadScene("MainMenu");
     }
 }

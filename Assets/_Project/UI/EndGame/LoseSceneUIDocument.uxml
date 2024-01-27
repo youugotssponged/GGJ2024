@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 32px; background-color: rgb(56, 56, 56);">
+        <ui:Label text="YOU LOSE" display-tooltip-when-elided="true" name="EndGameMessage" style="font-size: 100%; margin-top: 100px; margin-right: 100px; margin-bottom: 100px; margin-left: 100px; color: rgb(210, 210, 210);" />
+        <ui:Button text="Return to Main Menu" display-tooltip-when-elided="true" name="ReturnToMainMenuButton" style="font-size: 50%; -unity-text-align: middle-center; background-color: rgb(88, 88, 88); border-left-color: rgb(48, 48, 48); border-right-color: rgb(48, 48, 48); border-top-color: rgb(48, 48, 48); border-bottom-color: rgb(48, 48, 48); color: rgb(238, 238, 238);" />
+    </ui:VisualElement>
+</ui:UXML>
