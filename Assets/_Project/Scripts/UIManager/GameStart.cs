@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class GameStart : MonoBehaviour
@@ -14,14 +15,25 @@ public class GameStart : MonoBehaviour
         SceneProperties.CurrentScore = 0;
         SceneProperties.RequiredScore = 5;
         SceneProperties.OnPausedChanged += OnPausedChanged;
+        SceneProperties.Paused = false;
     }
 
     private void OnPausedChanged(bool paused)
     {
         if (SceneProperties.Paused)
+        {
             Time.timeScale = 0;
+            MouseLook.SetCursorLockState(false);
+            Movement.StopMovement();
+            MouseLook.SetMouseMovementOff();
+        }
         else
+        {
             Time.timeScale = 1;
+            MouseLook.SetCursorLockState(true);
+            Movement.StartMovement();
+            MouseLook.SetMouseMovementOn();
+        }
     }
 
     private void Update()

@@ -27,6 +27,7 @@ public class TimerManager : MonoBehaviour
                 if (SceneProperties.CurrentScore < SceneProperties.RequiredScore)
                 {
                     ContinueTimer = false;
+                    MouseLook.SetCursorLockState(false);
                     SceneManager.LoadScene(4);
                 }
                 else

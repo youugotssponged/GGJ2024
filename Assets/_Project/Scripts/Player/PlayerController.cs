@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
                 }
                 
                 door.OpenClose();
-                movement.StopMovement();
+                Movement.StopMovement();
                 MouseLook.SetMouseMovementOff();
                 inJokeSession = true;
                 StartCoroutine(jokeManager.StartJokeManager((int)door.SelfColour));
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     {
         MouseLook.SetCursorLockState(true);
         MouseLook.SetMouseMovementOn();
-        movement.StartMovement();
+        Movement.StartMovement();
         CurrentDoor.OpenClose();
         CurrentDoor.SetVisited();
         jokeSO.OnJokeFinished -= ResumePlayer;

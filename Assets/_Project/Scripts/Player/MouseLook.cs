@@ -37,12 +37,6 @@ public class MouseLook : MonoBehaviour
             m_MouseLook.y = Mathf.Clamp(m_MouseLook.y, m_yClampMin, m_yClampMax);
             transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right); // Rotate camera
             transform.parent.localRotation = Quaternion.AngleAxis(m_MouseLook.x, Vector3.up); // Rotate everything
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                CursorIsLocked = !CursorIsLocked; // Invert on each escape press
-                SetCursorLockState(CursorIsLocked);
-            }
         }
     }
 

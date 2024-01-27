@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     private Rigidbody m_Rigidbody;
     private float m_TranslationSpeed;
     private float m_StrafeSpeed;
-    private bool allowedToMove = true;
+    private static bool allowedToMove = true;
     
     private static readonly int IsWalking = Animator.StringToHash("IsWalking");
 
@@ -29,8 +29,8 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void StopMovement() => allowedToMove = false;
-    public void StartMovement() => allowedToMove = true;
+    public static void StopMovement() => allowedToMove = false;
+    public static void StartMovement() => allowedToMove = true;
     
     private void HandleWalk(float deltaTime)
     {
