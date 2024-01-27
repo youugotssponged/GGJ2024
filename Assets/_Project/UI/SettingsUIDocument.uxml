@@ -3,7 +3,6 @@
     <ui:VisualElement name="SettingsContainer" style="width: 100%; height: 100%; opacity: 1; visibility: visible; overflow: visible; display: flex; align-items: center; justify-content: center; background-color: rgba(56, 56, 56, 255);">
         <ui:Label text="Settings" display-tooltip-when-elided="true" name="SettingsLabel" style="font-size: 100%; color: rgb(238, 238, 238);" />
         <ui:SliderInt picking-mode="Ignore" label="Volume" value="42" high-value="100" name="VolumeSlider" class="SliderStyle" style="font-size: 80%;" />
-        <ui:SliderInt picking-mode="Ignore" label="Text Speed" value="42" high-value="100" name="TextSpeedSlider" class="SliderStyle" style="font-size: 80%;" />
         <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="ButtonStyle" />
     </ui:VisualElement>
 </ui:UXML>

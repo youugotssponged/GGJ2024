@@ -29,11 +29,9 @@ public class MainMenu : MonoBehaviour
         SettingsRoot.style.display = DisplayStyle.None;
         // Set values
         SettingsRoot.Q<SliderInt>("VolumeSlider").value = Settings.Volume;
-        SettingsRoot.Q<SliderInt>("TextSpeedSlider").value = Settings.TextSpeed;
         // Set events
         SettingsRoot.Q<Button>("BackButton").clicked += BackButton_clicked;
         SettingsRoot.Q<SliderInt>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
-        SettingsRoot.Q<SliderInt>("TextSpeedSlider").RegisterValueChangedCallback(OnTextSpeedSliderChangedEvent);
     }
 
     // Start Screen Buttons
@@ -55,11 +53,6 @@ public class MainMenu : MonoBehaviour
     {
         // Update Scriptable Object storing volume.
         Settings.Volume = evt.newValue;
-    }
-    private void OnTextSpeedSliderChangedEvent(ChangeEvent<int> evt)
-    {
-        // Update Scriptable Object storing volume.
-        Settings.TextSpeed = evt.newValue;
     }
     private void BackButton_clicked()
     {

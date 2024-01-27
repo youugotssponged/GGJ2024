@@ -18,19 +18,4 @@ public class SettingsScriptableObject : ScriptableObject
             OnVolumeChanged?.Invoke(volume);
         }
     }
-
-    public delegate void TextSpeedChanged(int textSpeed);
-    public event TextSpeedChanged OnTextSpeedChanged;
-    [SerializeField]
-    private int textSpeed = 10;
-    public int TextSpeed
-    {
-        get { return textSpeed; }
-        set
-        {
-            textSpeed = value;
-            OnTextSpeedChanged?.Invoke(textSpeed);
-        }
-    }
-
 }
