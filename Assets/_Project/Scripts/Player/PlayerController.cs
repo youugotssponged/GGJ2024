@@ -1,5 +1,7 @@
 using System;
+using System.Security.Cryptography;
 using UnityEngine;
+using Random = System.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,6 +31,22 @@ public class PlayerController : MonoBehaviour
                              && !door.Visited
                              && CurrentDoor == null)
             {
+
+                int knockSoundSelection = RandomNumberGenerator.GetInt32(1, 4);
+
+                switch (knockSoundSelection)
+                {
+                    case 1:
+                        SoundManager.PlaySoundAt("Knock", transform.position);
+                        break;
+                    case 2:
+                        SoundManager.PlaySoundAt("Doorbell", transform.position);
+                        break;
+                    case 3:
+                        SoundManager.PlaySoundAt("Doorbell2", transform.position);
+                        break;
+                }
+                
                 door.OpenClose();
                 movement.StopMovement();
                 MouseLook.SetMouseMovementOff();
