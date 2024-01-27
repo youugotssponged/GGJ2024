@@ -155,15 +155,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSources:
-  - key: MainMenuMusic
-    value: {fileID: 8300000, guid: dfcbb2764fc37804e8530737a056446b, type: 3}
+  - key: AngryPerson2
+    value: {fileID: 8300000, guid: cd198d55e584f6f42976071fd6e10543, type: 3}
   - key: DoorClose
     value: {fileID: 8300000, guid: e04ad28ec3208b342bf1d42646c95479, type: 3}
   - key: DoorClose2
     value: {fileID: 8300000, guid: 332153d007d3d6746bdcd263d17b81da, type: 3}
-  - key: DoorBell
+  - key: Doorbell
     value: {fileID: 8300000, guid: fec807dd40089934795c02102de90d99, type: 3}
-  - key: DoorBell2
+  - key: Doorbell2
     value: {fileID: 8300000, guid: 89c1d59f3ed1b304da6ad864c1e4f8a6, type: 3}
+  - key: HappyPerson
+    value: {fileID: 8300000, guid: 1c1952d80a040664b8c87cc957abb6a7, type: 3}
+  - key: HappyPerson2
+    value: {fileID: 8300000, guid: 6fd6c6cf080b61047a55fdd2250941fd, type: 3}
+  - key: HappyPerson3
+    value: {fileID: 8300000, guid: 7caeccaa11af06046b254ff1f0b86dbe, type: 3}
   - key: Knock
     value: {fileID: 8300000, guid: 50910e91d5200d246b157121c73cca55, type: 3}
+  - key: Laugh
+    value: {fileID: 8300000, guid: 872b91866e696694c8a645786ee8ebe1, type: 3}
+  - key: Laugh2
+    value: {fileID: 8300000, guid: bc04b93f91143364e95cbcaa9e1ff6d1, type: 3}
+  - key: Laugh4
+    value: {fileID: 8300000, guid: 29632e44de5aad3429a7883d90adf8c7, type: 3}
+  - key: MainMenuMusic
+    value: {fileID: 8300000, guid: dfcbb2764fc37804e8530737a056446b, type: 3}
+  - key: Laugh3
+    value: {fileID: 8300000, guid: 06a72c19cbd27de4091d986b3cb6f522, type: 3}
+  - key: AngryPerson
+    value: {fileID: 8300000, guid: 39f684266d9bdc142aaeb4b699cc7c62, type: 3}
