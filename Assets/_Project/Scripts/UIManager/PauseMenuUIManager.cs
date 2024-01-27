@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PauseMenuUIManager : MonoBehaviour
@@ -27,7 +28,6 @@ public class PauseMenuUIManager : MonoBehaviour
         SceneProperties.OnPausedChanged += (paused) => Root.style.display = paused ? DisplayStyle.Flex : DisplayStyle.None;
         Root.Q<Button>("ResumeButton").clicked += ResumeButton_clicked;
         Root.Q<SliderInt>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
-        Root.Q<SliderInt>("TextSpeedSlider").RegisterValueChangedCallback(OnTextSpeedSliderChangedEvent);
         Root.Q<Button>("ReturnToMenuButton").clicked += ReturnToMenuButton_clicked; ;
     }
 
@@ -44,13 +44,8 @@ public class PauseMenuUIManager : MonoBehaviour
         // Update Scriptable Object storing volume.
         Settings.Volume = evt.newValue;
     }
-    private void OnTextSpeedSliderChangedEvent(ChangeEvent<int> evt)
-    {
-        // Update Scriptable Object storing volume.
-        Settings.TextSpeed = evt.newValue;
-    }
     private void ReturnToMenuButton_clicked()
     {
-        // ToDo go back to start screen
+        SceneManager.LoadScene(1);
     }
 }

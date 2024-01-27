@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Project/Scenes/SplashScreen/SplashScreen.unity
+    guid: fae37224283f8744a8e9d51dd172a301
+  - enabled: 1
+    path: Assets/_Project/Scenes/MainMenu/MainMenu.unity
+    guid: 3b9debb70c24d744d9d7fd78ab1f0a3d
+  - enabled: 1
+    path: Assets/_Project/Scenes/Niall/NiallMap.unity
+    guid: db50ebd2d1fcd994ea4df3f646cbbb23
+  - enabled: 1
+    path: Assets/_Project/Scenes/EndGameScenes/WinScene.unity
+    guid: 1a986f6dca24e744f93b70ae21ce211c
+  - enabled: 1
+    path: Assets/_Project/Scenes/EndGameScenes/LoseScene.unity
+    guid: b52c39f9b639adb4b9ba1daa95fe2f49
   m_configObjects: {}

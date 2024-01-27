@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_Project/UI/UIStyles.uss?fileID=7433441132597879392&amp;guid=7a0641d5e8037554494fd0fb0ed7d722&amp;type=3#UIStyles" />
-    <ui:VisualElement name="StartScreenContainer" style="justify-content: center; align-items: center; width: 100%; height: 100%; display: flex;">
+    <ui:VisualElement name="StartScreenContainer" style="justify-content: center; align-items: center; width: 100%; height: 100%; display: flex; background-color: rgb(56, 56, 56);">
         <ui:Button text="Start" display-tooltip-when-elided="true" name="StartButton" class="ButtonStyle" />
         <ui:Button text="Settings" display-tooltip-when-elided="true" name="SettingsButton" class="ButtonStyle" />
         <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" class="ButtonStyle" />

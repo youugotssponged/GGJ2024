@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class TimerManager : MonoBehaviour
@@ -21,6 +22,19 @@ public class TimerManager : MonoBehaviour
         // Progress the timer every second
         while (ContinueTimer)
         {
+            if (SceneProperties.SecondsRemaining <= 0)
+            {
+                if (SceneProperties.CurrentScore < SceneProperties.RequiredScore)
+                {
+                    ContinueTimer = false;
+                    SceneManager.LoadScene(4);
+                }
+                else
+                {
+                    // Trigger transition manager to next level/win screen
+                    // ToDo
+                }
+            }
             yield return new WaitForSeconds(1f);
             SceneProperties.SecondsRemaining--;
         }

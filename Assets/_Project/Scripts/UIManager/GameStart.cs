@@ -10,9 +10,9 @@ public class GameStart : MonoBehaviour
     void Start()
     {
         Debug.Log("Game start");
-        SceneProperties.SecondsRemaining = 200;
-        SceneProperties.CurrentScore = 2;
-        SceneProperties.RequiredScore = 7;
+        SceneProperties.SecondsRemaining = 90;
+        SceneProperties.CurrentScore = 0;
+        SceneProperties.RequiredScore = 5;
         SceneProperties.OnPausedChanged += OnPausedChanged;
     }
 
