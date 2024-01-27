@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="MainContainer" style="flex-direction: row;">
+        <ui:VisualElement name="LeftContainer" style="flex-direction: row; width: 50%; padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px;">
+            <ui:VisualElement name="Timer" style="width: 150px; height: auto; -unity-text-align: lower-center; background-color: rgba(123, 95, 39, 0.31); border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgba(48, 113, 207, 0.3); border-right-color: rgba(48, 113, 207, 0.3); border-top-color: rgba(48, 113, 207, 0.3); border-bottom-color: rgba(48, 113, 207, 0.3); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; position: relative; min-width: 150px; left: auto; flex-direction: column;">
+                <ui:Label text="Time Remaining" display-tooltip-when-elided="true" name="TimerLabel" style="margin-top: 20px; margin-right: 20px; margin-bottom: 0; margin-left: 20px;" />
+                <ui:Label text="100" display-tooltip-when-elided="true" name="SecondsRemainingLabel" style="font-size: 36px; -unity-font-style: normal; margin-top: 0; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightContainer" style="flex-direction: row; width: 50%; white-space: nowrap; justify-content: flex-end; padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px;">
+            <ui:VisualElement name="Score" style="width: 150px; height: auto; -unity-text-align: lower-center; background-color: rgba(123, 95, 39, 0.31); border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgba(48, 113, 207, 0.3); border-right-color: rgba(48, 113, 207, 0.3); border-top-color: rgba(48, 113, 207, 0.3); border-bottom-color: rgba(48, 113, 207, 0.3); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; position: relative; left: auto; min-width: 150px;">
+                <ui:Label text="Quota" display-tooltip-when-elided="true" name="ScoreLabel" style="margin-top: 20px; margin-right: 20px; margin-bottom: 0; margin-left: 20px;" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="CurrentScoreLabel" style="font-size: 36px; -unity-font-style: normal; margin-top: 0; margin-right: 0; margin-bottom: 20px; margin-left: 20px;" />
+                    <ui:Label text="/" display-tooltip-when-elided="true" name="CurrentScoreSeparatorLabel" style="font-size: 36px; -unity-font-style: normal; margin-top: 0; margin-right: 0; margin-bottom: 20px; margin-left: 0;" />
+                    <ui:Label text="10" display-tooltip-when-elided="true" name="RequiredScoreLabel" style="font-size: 36px; -unity-font-style: normal; margin-top: 0; margin-right: 20px; margin-bottom: 20px; margin-left: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
