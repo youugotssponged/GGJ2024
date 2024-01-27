@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
-    private AudioSource audioSource;
-    private SettingsScriptableObject settingsSO;
+    private static AudioSource audioSource;
+    [SerializeField] private SettingsScriptableObject settingsSO;
 
     public void Start()
     {
@@ -26,7 +26,7 @@ public class SoundManager : MonoBehaviour
         audioSource.clip = null;
     }
     
-    public void PlayTheme(string key, bool shouldLoop)
+    public static void PlayTheme(string key, bool shouldLoop)
     {
         audioSource.Stop(); // Stop current playing clip on this Audio Source
         audioSource.clip = SoundContainer.GetAudioClipInternal(key);
@@ -34,7 +34,7 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
     }
 
-    public void PlaySound(string key)
+    public static void PlaySound(string key)
     {
         var clip = SoundContainer.GetAudioClipInternal(key);
         if (clip != null)
@@ -43,7 +43,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlaySoundAt(string key, Vector3 position)
+    public static void PlaySoundAt(string key, Vector3 position)
     {
         var clip = SoundContainer.GetAudioClipInternal(key);
         if (clip != null)

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Xml.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -143,8 +144,39 @@ public class JokeManager : MonoBehaviour
 
         if (succeeded)
         {
+            int happyPersonSelection = RandomNumberGenerator.GetInt32(1, 5);
+
+            switch (happyPersonSelection)
+            {
+                case 1:
+                    SoundManager.PlaySoundAt("Laugh", transform.position);
+                    break;
+                case 2:
+                    SoundManager.PlaySoundAt("Laugh2", transform.position);
+                    break;
+                case 3:
+                    SoundManager.PlaySoundAt("Laugh3", transform.position);
+                    break;
+                case 4:
+                    SoundManager.PlaySoundAt("Laugh4", transform.position);
+                    break;
+            }
+            
             // Update score
             SceneProperties.CurrentScore++;
+        }
+        else
+        {
+            int angrySound = RandomNumberGenerator.GetInt32(1, 3);
+            switch (angrySound)
+            {
+                case 1:
+                    SoundManager.PlaySoundAt("AngryPerson", transform.position);
+                    break;
+                case 2:
+                    SoundManager.PlaySoundAt("AngryPerson2", transform.position);
+                    break;
+            }
         }
 
         // Hide and reset UI
