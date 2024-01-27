@@ -13,6 +13,6 @@ public class EndGameUIController : MonoBehaviour
     private void ReturnToMainMenuButton_clicked()
     {
         // Load back to main scene
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(1);
     }
 }

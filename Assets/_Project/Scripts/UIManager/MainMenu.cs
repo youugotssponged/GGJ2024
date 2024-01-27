@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour
     private void StartButton_clicked()
     {
         // Start the game by loading the correct scene.
-        SceneManager.LoadScene("NiallMap");
+        SceneManager.LoadScene(2);
     }
 
     private void SettingsButton_clicked()

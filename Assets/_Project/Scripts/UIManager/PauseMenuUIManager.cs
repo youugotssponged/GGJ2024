@@ -46,6 +46,6 @@ public class PauseMenuUIManager : MonoBehaviour
     }
     private void ReturnToMenuButton_clicked()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(1);
     }
 }
