@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SplashScreenVideo: {fileID: 1754422745}
-  MainMenuSceneIndex: 0
+  MainMenuSceneIndex: 1
   SplashScreenEndingInSeconds: 6
 --- !u!1 &1754422743
 GameObject:

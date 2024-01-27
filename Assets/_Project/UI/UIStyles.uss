@@ -1,5 +1,5 @@
 .ButtonStyle {
-    width: 30%;
+    width: 75%;
     height: 100px;
     margin-top: 16px;
     margin-right: 16px;
