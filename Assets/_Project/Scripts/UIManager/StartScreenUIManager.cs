@@ -20,7 +20,7 @@ public class StartScreenUIManager : MonoBehaviour
         StartScreenRoot = StartButtonsUIDocument.rootVisualElement;
         StartScreenRoot.Q<Button>("StartButton").clicked += StartButton_clicked;
         StartScreenRoot.Q<Button>("SettingsButton").clicked += SettingsButton_clicked;
-        StartScreenRoot.Q<Button>("ExitButton").clicked += ExitButton_clicked;
+        StartScreenRoot.Q<Button>("ExitButton").clicked += () => Application.Quit();
 
         // Setting up Settings menu events.
         SettingsRoot = SettingsButtonsUIDocument.rootVisualElement;
@@ -28,7 +28,7 @@ public class StartScreenUIManager : MonoBehaviour
         SettingsRoot.Q<Button>("BackButton").clicked += BackButton_clicked;
     }
 
-
+    // Start Screen Buttons
     private void StartButton_clicked()
     {
         // Start the game by loading the correct scene.
@@ -41,11 +41,8 @@ public class StartScreenUIManager : MonoBehaviour
         SettingsRoot.style.display = DisplayStyle.Flex;
     }
 
-    private void ExitButton_clicked()
-    {
-        // Close the game
-        Application.Quit();
-    }
+    // Settings
+
     private void BackButton_clicked()
     {
         // Hide Settings, and show start screen buttons.
