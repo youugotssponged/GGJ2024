@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
     public static Action<DoorColours> DoorInteractionEvent;
     private Movement movement;
     public JokeManager jokeManager;
+    public JokeScriptableObject jokeSO;
+    private bool inJokeSession = false;
+    private IDoorInteractable CurrentDoor = null;
 
     private void Start()
     {
@@ -14,34 +17,41 @@ public class PlayerController : MonoBehaviour
             movement = GetComponent<Movement>();
         }
     }
-
-
+    
     private void Update()
     {
         Debug.DrawRay(transform.position, Vector3.forward, Color.red);
         if(Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 60.0f))
         {
             var door = hit.collider.GetComponent<IDoorInteractable>();
-            if (door != null && Input.GetKeyDown(KeyCode.E))
+            if (door != null && Input.GetKeyDown(KeyCode.E) 
+                             && !inJokeSession 
+                             && !door.Visited
+                             && CurrentDoor == null)
             {
                 door.OpenClose();
                 movement.StopMovement();
-                SignalJokeManagerEvent(door.SelfColour);
-                
+                MouseLook.SetMouseMovementOff();
+                inJokeSession = true;
+                StartCoroutine(jokeManager.StartJokeManager((int)door.SelfColour));
+                jokeSO.OnJokeFinished += ResumePlayer;
+                CurrentDoor = door;
+                MouseLook.SetCursorLockState(false);
             }
         }
     }
 
-    public void DoorCallBack(IDoorInteractable door)
+    private void ResumePlayer()
     {
+        MouseLook.SetCursorLockState(true);
+        MouseLook.SetMouseMovementOn();
         movement.StartMovement();
-        door.OpenClose();
-    }
-    
-    
-    
-    private void SignalJokeManagerEvent(DoorColours doorColour)
-    {
-        DoorInteractionEvent?.Invoke(doorColour);
+        CurrentDoor.OpenClose();
+        CurrentDoor.SetVisited();
+        jokeSO.OnJokeFinished -= ResumePlayer;
+        
+        inJokeSession = false;
+        CurrentDoor = null;
     }
 }
+

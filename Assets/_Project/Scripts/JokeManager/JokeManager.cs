@@ -19,6 +19,8 @@ public class Joke
 
 public class JokeManager : MonoBehaviour
 {
+    public JokeScriptableObject JokeSO;
+    
     bool OptionSelected = false;
     int SelectedOption = 0;
     List<Joke> JokeList;
@@ -148,5 +150,6 @@ public class JokeManager : MonoBehaviour
         // Hide and reset UI
         Root.style.display = DisplayStyle.None;
         // Return control to player
+        JokeSO.OnJokeFinished?.Invoke();
     }
 }

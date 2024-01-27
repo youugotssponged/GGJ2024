@@ -1,32 +1,34 @@
 using DG.Tweening;
-using DG.Tweening.Plugins.Options;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
 public enum DoorColours
 {
-    GREEN,
-    YELLOW,
-    RED,
-    BROWN,
+    BROWN = 0,
+    GREEN = 1,
+    YELLOW = 2,
+    RED = 3,
 }
 
 public interface IDoorInteractable
 {
+    public bool Visited { get; }
+    public void SetVisited();
     public DoorColours SelfColour { get; }
     public void SetColour(DoorColours doorColour);
-    public bool? OpenClose(float rotateSpeed = 2.0f);
+    public void OpenClose(float rotateSpeed = 2.0f);
 }
 
 public class Door : MonoBehaviour, IDoorInteractable
 {
     private DoorColours _selfColour;
     public DoorColours SelfColour => _selfColour; // Public getter
+
+    private bool _visited;
+    public bool Visited => _visited;
+
+    public void SetVisited() => _visited = true;
 
     private bool Open { get; set; } = false;
 
@@ -45,9 +47,8 @@ public class Door : MonoBehaviour, IDoorInteractable
         ChangeColour(color);
     }
 
-    public bool? OpenClose(float rotateSpeed = 2.0f) //0.5f seems like it would be good for slamming
+    public void OpenClose(float rotateSpeed = 2.0f) //0.5f seems like it would be good for slamming
     {
-        if (transform.rotation.eulerAngles.y % 90 != 0) return null; //only opens/closes if not already
         if (Open)
         {
             //close
@@ -70,7 +71,6 @@ public class Door : MonoBehaviour, IDoorInteractable
             transform.DORotate(newVector, rotateSpeed);
         }
         Open = !Open;
-        return Open;
     }
 
     private void ChangeColour(Color colour)

@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     private Rigidbody m_Rigidbody;
     private float m_TranslationSpeed;
     private float m_StrafeSpeed;
-    private bool allowedToMove;
+    private bool allowedToMove = true;
     
     private static readonly int IsWalking = Animator.StringToHash("IsWalking");
 
