@@ -13,6 +13,15 @@ public class GameStart : MonoBehaviour
         SceneProperties.SecondsRemaining = 200;
         SceneProperties.CurrentScore = 2;
         SceneProperties.RequiredScore = 7;
+        SceneProperties.OnPausedChanged += OnPausedChanged;
+    }
+
+    private void OnPausedChanged(bool paused)
+    {
+        if (SceneProperties.Paused)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
     }
 
     private void Update()
