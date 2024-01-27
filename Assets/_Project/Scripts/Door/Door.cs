@@ -3,32 +3,51 @@ using DG.Tweening.Plugins.Options;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
-public class DoorController : MonoBehaviour
+public enum DoorColours
 {
+    GREEN,
+    YELLOW,
+    RED,
+    BROWN,
+}
+
+public interface IDoorInteractable
+{
+    public DoorColours SelfColour { get; }
+    public void SetColour(DoorColours doorColour);
+    public bool? OpenClose(float rotateSpeed = 2.0f);
+}
+
+public class Door : MonoBehaviour, IDoorInteractable
+{
+    private DoorColours _selfColour;
+    public DoorColours SelfColour => _selfColour; // Public getter
+
     private bool Open { get; set; } = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetColour(DoorColours doorColour)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
+        Color color = (doorColour) switch
         {
-            OpenClose();
-            ChangeColour(Color.yellow);
-        }
+            DoorColours.YELLOW => Color.yellow,
+            DoorColours.GREEN => Color.green,
+            DoorColours.RED => Color.red,
+            DoorColours.BROWN => new Color(160,82,45),
+            _ => new Color(160,82,45)
+        };
+        
+        _selfColour = doorColour;
+        ChangeColour(color);
     }
 
-    public void OpenClose(float rotateSpeed = 2.0f) //0.5f seems like it would be good for slamming
+    public bool? OpenClose(float rotateSpeed = 2.0f) //0.5f seems like it would be good for slamming
     {
-        if (transform.rotation.eulerAngles.y % 90 != 0) return; //only opens/closes if not already
+        if (transform.rotation.eulerAngles.y % 90 != 0) return null; //only opens/closes if not already
         if (Open)
         {
             //close
@@ -51,9 +70,10 @@ public class DoorController : MonoBehaviour
             transform.DORotate(newVector, rotateSpeed);
         }
         Open = !Open;
+        return Open;
     }
 
-    public void ChangeColour(Color colour)
+    private void ChangeColour(Color colour)
     {
         var material = GetComponent<Renderer>().material;
         if (material != null)
