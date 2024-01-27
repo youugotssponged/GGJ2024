@@ -15,4 +15,12 @@ public class GameStart : MonoBehaviour
         SceneProperties.RequiredScore = 7;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneProperties.Paused = !SceneProperties.Paused;
+        }
+    }
+
 }

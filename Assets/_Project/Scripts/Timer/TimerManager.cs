@@ -23,7 +23,6 @@ public class TimerManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             SceneProperties.SecondsRemaining--;
-            Debug.Log(SceneProperties.SecondsRemaining);
         }
     }
 

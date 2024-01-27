@@ -1,4 +1,5 @@
 using System.Xml.Serialization;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -21,10 +22,10 @@ public class PlayerUIManager : MonoBehaviour
         CurrentScoreLabel = Root.Q<Label>("CurrentScoreLabel");
         RequiredScoreLabel = Root.Q<Label>("RequiredScoreLabel");
 
-        Debug.Log("Subscribing");
         // Sub to events for when propeties in scriptable object change.
-        SceneProperties.OnSecondsRemainingChanged += (timeRemaining) => { TimerLabel.text = timeRemaining.ToString(); Debug.Log("Timer Triggered"); };
-        SceneProperties.OnCurrentScoreChanged += (currentScore) => { CurrentScoreLabel.text = currentScore.ToString(); Debug.Log("Score Triggered"); };
-        SceneProperties.OnRequiredScoreChanged += (requiredScore) => { RequiredScoreLabel.text = requiredScore.ToString(); Debug.Log("Quota Triggered"); };
+        SceneProperties.OnSecondsRemainingChanged += (timeRemaining) => TimerLabel.text = timeRemaining.ToString();
+        SceneProperties.OnCurrentScoreChanged += (currentScore) => CurrentScoreLabel.text = currentScore.ToString();
+        SceneProperties.OnRequiredScoreChanged += (requiredScore) => RequiredScoreLabel.text = requiredScore.ToString();
+        SceneProperties.OnPausedChanged += (paused) => Root.style.display = paused ? DisplayStyle.None : DisplayStyle.Flex;
     }
 }

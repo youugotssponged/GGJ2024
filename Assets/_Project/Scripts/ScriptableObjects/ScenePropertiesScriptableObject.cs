@@ -4,6 +4,20 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ScenePropertiesScriptableObject", menuName = "ScriptableObjects/ScenePropertiesScriptableObject", order = 1)]
 public class ScenePropertiesScriptableObject : ScriptableObject
 {
+    public delegate void PausedChanged(bool paused);
+    public event PausedChanged OnPausedChanged;
+    [SerializeField]
+    private bool paused = false;
+    public bool Paused
+    {
+        get { return paused; }
+        set
+        {
+            paused = value;
+            OnPausedChanged?.Invoke(paused);
+        }
+    }
+
     public delegate void SecondsRemainingChanged(int timeRemaining);
     public event SecondsRemainingChanged OnSecondsRemainingChanged;
     [SerializeField]
