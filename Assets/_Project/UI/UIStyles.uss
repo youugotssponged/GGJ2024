@@ -16,3 +16,12 @@
 .ButtonStyle:hover {
     background-color: rgb(164, 87, 87);
 }
+
+.SliderStyle {
+    font-size: 32px;
+    width: 75%;
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
