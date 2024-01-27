@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1338df0de2fbfe4fa5220fa6ed18c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsSO: {fileID: 0}
 --- !u!114 &340678033882169910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,5 +186,11 @@ MonoBehaviour:
     value: {fileID: 8300000, guid: 06a72c19cbd27de4091d986b3cb6f522, type: 3}
   - key: AngryPerson
     value: {fileID: 8300000, guid: 39f684266d9bdc142aaeb4b699cc7c62, type: 3}
+  - key: LevelTheme1
+    value: {fileID: 8300000, guid: c59c222d6316238439414114277fdb41, type: 3}
+  - key: LevelTheme1
+    value: {fileID: 8300000, guid: c59c222d6316238439414114277fdb41, type: 3}
+  - key: LevelTheme1
+    value: {fileID: 8300000, guid: c59c222d6316238439414114277fdb41, type: 3}
   - key: LevelTheme1
     value: {fileID: 8300000, guid: c59c222d6316238439414114277fdb41, type: 3}

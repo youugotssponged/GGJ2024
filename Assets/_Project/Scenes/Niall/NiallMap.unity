@@ -53633,6 +53633,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 340678033882169910, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
+      propertyPath: AudioSources.Array.data[16].key
+      value: LevelTheme2
+      objectReference: {fileID: 0}
+    - target: {fileID: 340678033882169910, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
+      propertyPath: AudioSources.Array.data[17].key
+      value: LevelTheme3
+      objectReference: {fileID: 0}
+    - target: {fileID: 340678033882169910, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
+      propertyPath: AudioSources.Array.data[18].key
+      value: LevelTheme4
+      objectReference: {fileID: 0}
+    - target: {fileID: 340678033882169910, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
+      propertyPath: AudioSources.Array.data[16].value
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ac918b7ef2ba784a8681ef5683b9707, type: 3}
+    - target: {fileID: 340678033882169910, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
+      propertyPath: AudioSources.Array.data[17].value
+      value: 
+      objectReference: {fileID: 8300000, guid: 214f139e300b1dc4cba4f98aa9193ebb, type: 3}
+    - target: {fileID: 340678033882169910, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
+      propertyPath: AudioSources.Array.data[18].value
+      value: 
+      objectReference: {fileID: 8300000, guid: c387c9b7ab7834f4b9fa72a3363f462d, type: 3}
     - target: {fileID: 2025404251788559517, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -53677,6 +53701,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6807144922073217474, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
+      propertyPath: settingsSO
+      value: 
+      objectReference: {fileID: 11400000, guid: af8e16f6f85a0f1409c1f5cfdbca6f59, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 461aa1c1423c3754c9c6d6ad8b7e28d2, type: 3}
 --- !u!1001 &378191759427224286
