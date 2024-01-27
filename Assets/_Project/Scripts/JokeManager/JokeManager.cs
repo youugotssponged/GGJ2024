@@ -87,8 +87,9 @@ public class JokeManager : MonoBehaviour
         for (int i = 0; i < numberOfJokes; i++)
         {
             // Get random joke from full Joke List
-            //int randomNumber = Random.Range(0, jokesToShow.Count - 1);
-            Joke joke = JokeList[i];
+            int randomNumber = Random.Range(0, JokeList.Count - 1);
+            Debug.Log(randomNumber);
+            Joke joke = JokeList[randomNumber];
 
             // Check the joke is not already selected
             if (jokesToShow.Contains(joke))
