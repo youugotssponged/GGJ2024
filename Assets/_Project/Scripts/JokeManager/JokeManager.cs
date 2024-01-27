@@ -1,12 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Xml.Serialization;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+
+[XmlRoot(ElementName = "Joke")]
+public class Joke
+{
+    public string Setup;
+    public string Option1;
+    public string Option2;
+    public string Option3;
+    public int CorrectAnswer;
+}
 
 public class JokeManager : MonoBehaviour
 {
     bool OptionSelected = false;
     int SelectedOption = 0;
+    List<Joke> JokeList;
 
     [SerializeField]
     ScenePropertiesScriptableObject SceneProperties;
@@ -31,6 +46,18 @@ public class JokeManager : MonoBehaviour
         Option1Button.clicked += Option1Button_clicked;
         Option2Button.clicked += Option2Button_clicked;
         Option3Button.clicked += Option3Button_clicked;
+
+        LoadJokes();
+    }
+    void LoadJokes()
+    {
+        string jokesXmlPath = $@"{Application.streamingAssetsPath}\Jokes.xml";
+        XmlSerializer serializer = new XmlSerializer(typeof(List<Joke>));
+
+        using (FileStream fs = new FileStream(jokesXmlPath, FileMode.Open))
+        {
+            JokeList = (List<Joke>)serializer.Deserialize(fs);
+        }
     }
 
     private void Option1Button_clicked()
@@ -53,22 +80,36 @@ public class JokeManager : MonoBehaviour
     {
         Debug.Log("Showing Joke.");
         bool succeeded = true;
+
         // Load in number of jokes requried
-        string setup = "This is the setup";
-        string option1 = "This is option 1.";
-        string option2 = "This is option 2.";
-        string option3 = "This is option 3.";
-        int correctResponse = 2;
+        List<Joke> jokesToShow = new List<Joke>();
+
+        for (int i = 0; i < numberOfJokes; i++)
+        {
+            // Get random joke from full Joke List
+            //int randomNumber = Random.Range(0, jokesToShow.Count - 1);
+            Joke joke = JokeList[i];
+
+            // Check the joke is not already selected
+            if (jokesToShow.Contains(joke))
+            {
+                // The joke is already selected to be shown, repeat and pick another
+                i--;
+                continue;
+            }
+            jokesToShow.Add(joke);
+        }
+
         for (int i = 0; i < numberOfJokes; i++)
         {
             Debug.Log("Load Joke");
             SelectedOption = 0;
             OptionSelected = false;
             // Load in setup and options to UI
-            SetupLabel.text = setup;
-            Option1Button.text = option1;
-            Option2Button.text = option2;
-            Option3Button.text = option3;
+            SetupLabel.text = jokesToShow[i].Setup;
+            Option1Button.text = jokesToShow[i].Option1;
+            Option2Button.text = jokesToShow[i].Option2;
+            Option3Button.text = jokesToShow[i].Option3;
 
             Root.style.display = DisplayStyle.Flex;
 
@@ -80,12 +121,11 @@ public class JokeManager : MonoBehaviour
             }
 
             // Check if the correct option was selected.
-            if (SelectedOption == correctResponse)
+            if (SelectedOption == jokesToShow[i].CorrectAnswer)
             {
                 // Continue/Succeed if correct
                 // ToDo play laughing sound
                 Debug.Log("Correct Answer");
-                Root.style.display = DisplayStyle.None;
                 continue;
             }
             else
@@ -93,7 +133,6 @@ public class JokeManager : MonoBehaviour
                 // ToDo play angry sound
                 Debug.Log("Wrong asnwer");
                 succeeded = false;
-                Root.style.display = DisplayStyle.None;
                 break;
             }
             // End if wrong
@@ -106,6 +145,7 @@ public class JokeManager : MonoBehaviour
         }
 
         // Hide and reset UI
+        Root.style.display = DisplayStyle.None;
         // Return control to player
     }
 }
