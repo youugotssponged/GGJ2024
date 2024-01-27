@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SettingsScriptableObjects", menuName = "ScriptableObjects/SettingsScriptableObjects", order = 1)]
-public class SettingsScriptableObjects : ScriptableObject
+[CreateAssetMenu(fileName = "SettingsScriptableObject", menuName = "ScriptableObjects/SettingsScriptableObject", order = 1)]
+public class SettingsScriptableObject : ScriptableObject
 {
 
     public delegate void VolumeChanged(int volume);
@@ -15,7 +15,7 @@ public class SettingsScriptableObjects : ScriptableObject
         set
         {
             volume = value;
-            OnVolumeChanged.Invoke(volume);
+            OnVolumeChanged?.Invoke(volume);
         }
     }
 
@@ -29,7 +29,7 @@ public class SettingsScriptableObjects : ScriptableObject
         set
         {
             textSpeed = value;
-            OnTextSpeedChanged.Invoke(textSpeed);
+            OnTextSpeedChanged?.Invoke(textSpeed);
         }
     }
 

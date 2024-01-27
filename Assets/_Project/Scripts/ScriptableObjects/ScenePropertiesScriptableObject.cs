@@ -14,7 +14,7 @@ public class ScenePropertiesScriptableObject : ScriptableObject
         set 
         { 
             secondsRemaining = value;
-            OnSecondsRemainingChanged.Invoke(secondsRemaining);
+            OnSecondsRemainingChanged?.Invoke(secondsRemaining);
         }
     }
 
@@ -28,7 +28,7 @@ public class ScenePropertiesScriptableObject : ScriptableObject
         set
         {
             currentScore = value;
-            OnCurrentScoreChanged.Invoke(currentScore);
+            OnCurrentScoreChanged?.Invoke(currentScore);
         }
     }
 
@@ -42,7 +42,7 @@ public class ScenePropertiesScriptableObject : ScriptableObject
         set
         {
             requiredScore = value;
-            OnRequiredScoreChanged.Invoke(requiredScore);
+            OnRequiredScoreChanged?.Invoke(requiredScore);
         }
     }
 }
