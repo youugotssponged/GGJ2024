@@ -52,8 +52,8 @@ public class Door : MonoBehaviour, IDoorInteractable
         if (Open)
         {
             //close
-            var newVector = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
-            transform.DORotate(newVector, rotateSpeed);
+            var newVector = new Vector3(0, 0, 90);
+            transform.DOLocalRotate(newVector, rotateSpeed);
         } else
         {
             //open
@@ -67,8 +67,8 @@ public class Door : MonoBehaviour, IDoorInteractable
                     handle.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.33f);
                 });
             }
-            var newVector = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 90, transform.rotation.eulerAngles.z);
-            transform.DORotate(newVector, rotateSpeed);
+            var newVector = new Vector3(0, 90, 90);
+            transform.DOLocalRotate(newVector, rotateSpeed);
         }
         Open = !Open;
     }
