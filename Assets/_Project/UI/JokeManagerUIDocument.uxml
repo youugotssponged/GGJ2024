@@ -1,10 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/UIStyles.uss?fileID=7433441132597879392&amp;guid=7a0641d5e8037554494fd0fb0ed7d722&amp;type=3#UIStyles" />
     <ui:VisualElement style="flex-direction: column; justify-content: flex-end; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: center;">
-        <ui:VisualElement style="padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; background-color: rgba(0, 0, 0, 0.87); width: 75%;">
-            <ui:Label display-tooltip-when-elided="true" name="SetupLabel" text="SetupLabel" style="-unity-text-align: lower-center; font-size: 30%; margin-top: 16px; margin-right: 16px; margin-bottom: 16px; margin-left: 16px; color: rgb(210, 210, 210);" />
-            <ui:Button text="Option1Button" display-tooltip-when-elided="true" name="Option1Button" style="font-size: 25%; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; color: rgb(238, 238, 238); background-color: rgb(88, 88, 88);" />
-            <ui:Button text="Option2Button" display-tooltip-when-elided="true" name="Option2Button" style="font-size: 25%; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; color: rgb(238, 238, 238); background-color: rgb(88, 88, 88);" />
-            <ui:Button text="Option3Button" display-tooltip-when-elided="true" name="Option3Button" style="-unity-text-align: upper-center; font-size: 25%; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(238, 238, 238); background-color: rgb(88, 88, 88);" />
+        <ui:VisualElement style="padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; background-color: rgba(0, 0, 0, 0.87); width: auto; min-width: 75%; max-width: 85px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;">
+            <ui:Label name="SetupLabel" text="Setup" class="LabelStyle" />
+            <ui:Button text="Option1Button" display-tooltip-when-elided="true" name="Option1Button" class="JokeButtonStyle" />
+            <ui:Button text="Option2Button" display-tooltip-when-elided="true" name="Option2Button" class="JokeButtonStyle" />
+            <ui:Button text="Option3Button" display-tooltip-when-elided="true" name="Option3Button" class="JokeButtonStyle" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
