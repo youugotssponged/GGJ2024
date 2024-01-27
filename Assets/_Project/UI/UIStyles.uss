@@ -22,9 +22,18 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
+    transition-duration: 0.2s;
 }
 
 .ButtonStyle:hover {
+    background-color: rgb(164, 87, 87);
+    border-left-color: rgb(207, 102, 102);
+    border-right-color: rgb(207, 102, 102);
+    border-top-color: rgb(207, 102, 102);
+    border-bottom-color: rgb(207, 102, 102);
+}
+
+.ButtonStyle:focus {
     background-color: rgb(164, 87, 87);
     border-left-color: rgb(207, 102, 102);
     border-right-color: rgb(207, 102, 102);
@@ -49,11 +58,14 @@
     -unity-text-align: upper-left;
     align-items: stretch;
     justify-content: space-around;
-    background-color: rgb(56, 56, 56);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+
+.SliderStyle:focus {
+    color: rgba(162, 162, 162, 255);
 }
 
 .LabelStyle {
@@ -100,8 +112,29 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
+    transition-duration: 0.2s;
+}
+
+.JokeButtonStyle:hover {
+    background-color: rgb(159, 159, 159);
+}
+
+.JokeButtonStyle:focus {
+    background-color: rgb(159, 159, 159);
 }
 
 .LabelBoldStyle {
     -unity-font-style: bold;
+}
+
+.RobotoFont {
+    -unity-font-definition: url('project://database/Assets/_Project/UI/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=ec95042cc8a05694fbb6b74f1b8dd8da&type=2#Roboto-Regular SDF');
+}
+
+.HonkFont {
+    -unity-font-definition: url('project://database/Assets/_Project/UI/Fonts/Honk-Regular-VariableFont_MORF,SHLN%20SDF.asset?fileID=11400000&guid=843e82275d9a39c4cb6412134d8c83a4&type=2#Honk-Regular-VariableFont_MORF,SHLN SDF');
+}
+
+.SixtyFourFont {
+    -unity-font-definition: url('project://database/Assets/_Project/UI/Fonts/Sixtyfour-Regular-VariableFont_BLED,SCAN%20SDF.asset?fileID=11400000&guid=8580da320a4a0ce48aeff255ba555f83&type=2#Sixtyfour-Regular-VariableFont_BLED,SCAN SDF');
 }

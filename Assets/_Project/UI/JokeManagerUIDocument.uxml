@@ -2,10 +2,10 @@
     <Style src="project://database/Assets/_Project/UI/UIStyles.uss?fileID=7433441132597879392&amp;guid=7a0641d5e8037554494fd0fb0ed7d722&amp;type=3#UIStyles" />
     <ui:VisualElement style="flex-direction: column; justify-content: flex-end; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: center;">
         <ui:VisualElement style="padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; background-color: rgba(0, 0, 0, 0.87); width: auto; min-width: 75%; max-width: 85px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;">
-            <ui:Label name="SetupLabel" text="Setup" class="LabelStyle" />
-            <ui:Button text="Option1Button" display-tooltip-when-elided="true" name="Option1Button" class="JokeButtonStyle" />
-            <ui:Button text="Option2Button" display-tooltip-when-elided="true" name="Option2Button" class="JokeButtonStyle" />
-            <ui:Button text="Option3Button" display-tooltip-when-elided="true" name="Option3Button" class="JokeButtonStyle" />
+            <ui:Label name="SetupLabel" text="Setup" class="LabelStyle RobotoFont" />
+            <ui:Button text="Option1Button" display-tooltip-when-elided="true" name="Option1Button" class="JokeButtonStyle RobotoFont" />
+            <ui:Button text="Option2Button" display-tooltip-when-elided="true" name="Option2Button" class="JokeButtonStyle RobotoFont" />
+            <ui:Button text="Option3Button" display-tooltip-when-elided="true" name="Option3Button" class="JokeButtonStyle RobotoFont" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
