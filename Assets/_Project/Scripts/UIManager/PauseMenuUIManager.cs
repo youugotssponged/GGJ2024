@@ -28,7 +28,7 @@ public class PauseMenuUIManager : MonoBehaviour
         Root.Q<Button>("ResumeButton").clicked += ResumeButton_clicked;
         Root.Q<SliderInt>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
         Root.Q<SliderInt>("TextSpeedSlider").RegisterValueChangedCallback(OnTextSpeedSliderChangedEvent);
-        Root.Q<Button>("ExitButton").clicked += ExitButton_clicked; ;
+        Root.Q<Button>("ReturnToMenuButton").clicked += ReturnToMenuButton_clicked; ;
     }
 
 
@@ -49,8 +49,8 @@ public class PauseMenuUIManager : MonoBehaviour
         // Update Scriptable Object storing volume.
         Settings.TextSpeed = evt.newValue;
     }
-    private void ExitButton_clicked()
+    private void ReturnToMenuButton_clicked()
     {
-        Application.Quit();
+        // ToDo go back to start screen
     }
 }

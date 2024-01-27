@@ -40,7 +40,7 @@ public class StartScreenUIManager : MonoBehaviour
     private void StartButton_clicked()
     {
         // Start the game by loading the correct scene.
-        
+        // ToDo load game scene
     }
 
     private void SettingsButton_clicked()

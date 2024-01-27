@@ -4,6 +4,6 @@
         <ui:Button text="Resume" display-tooltip-when-elided="true" name="ResumeButton" class="ButtonStyle" />
         <ui:Slider picking-mode="Ignore" label="Volume" value="42" high-value="100" name="VolumeSlider" class="SliderStyle" />
         <ui:Slider picking-mode="Ignore" label="Text Speed" value="42" high-value="100" name="TextSpeedSlider" class="SliderStyle" />
-        <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" class="ButtonStyle" />
+        <ui:Button text="Return to Menu" display-tooltip-when-elided="true" name="ReturnToMenuButton" class="ButtonStyle" />
     </ui:VisualElement>
 </ui:UXML>

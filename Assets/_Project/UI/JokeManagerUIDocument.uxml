@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-direction: column; justify-content: flex-end; height: 100%; margin-top: 16px; margin-right: 16px; margin-bottom: 16px; margin-left: 16px;">
+        <ui:Label display-tooltip-when-elided="true" name="SetupLabel" text="SetupLabel" style="-unity-text-align: lower-center;" />
+        <ui:Button text="Option1Button" display-tooltip-when-elided="true" name="Option1Button" />
+        <ui:Button text="Option2Button" display-tooltip-when-elided="true" name="Option2Button" />
+        <ui:Button text="Option3Button" display-tooltip-when-elided="true" name="Option3Button" style="-unity-text-align: upper-center;" />
+    </ui:VisualElement>
+</ui:UXML>
