@@ -28,10 +28,10 @@ public class MainMenu : MonoBehaviour
         SettingsRoot = SettingsButtonsUIDocument.rootVisualElement;
         SettingsRoot.style.display = DisplayStyle.None;
         // Set values
-        SettingsRoot.Q<SliderInt>("VolumeSlider").value = Settings.Volume;
+        SettingsRoot.Q<Slider>("VolumeSlider").value = Settings.Volume;
         // Set events
         SettingsRoot.Q<Button>("BackButton").clicked += BackButton_clicked;
-        SettingsRoot.Q<SliderInt>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
+        SettingsRoot.Q<Slider>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
     }
 
     // Start Screen Buttons
@@ -49,7 +49,7 @@ public class MainMenu : MonoBehaviour
     }
 
     // Settings
-    private void OnVolumeSliderChangedEvent(ChangeEvent<int> evt)
+    private void OnVolumeSliderChangedEvent(ChangeEvent<float> evt)
     {
         // Update Scriptable Object storing volume.
         Settings.Volume = evt.newValue;

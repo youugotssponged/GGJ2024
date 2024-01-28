@@ -21,12 +21,12 @@ public class PauseMenuUIManager : MonoBehaviour
         Root.style.display = DisplayStyle.None;
 
         // Set values
-        Root.Q<SliderInt>("VolumeSlider").value = Settings.Volume;
+        Root.Q<Slider>("VolumeSlider").value = Settings.Volume;
 
         // Set events
         SceneProperties.OnPausedChanged += (paused) => Root.style.display = paused ? DisplayStyle.Flex : DisplayStyle.None;
         Root.Q<Button>("ResumeButton").clicked += ResumeButton_clicked;
-        Root.Q<SliderInt>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
+        Root.Q<Slider>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
         Root.Q<Button>("ReturnToMenuButton").clicked += ReturnToMenuButton_clicked; ;
     }
 
@@ -39,7 +39,7 @@ public class PauseMenuUIManager : MonoBehaviour
     }
 
     // Settings
-    private void OnVolumeSliderChangedEvent(ChangeEvent<int> evt)
+    private void OnVolumeSliderChangedEvent(ChangeEvent<float> evt)
     {
         // Update Scriptable Object storing volume.
         Debug.Log(evt.newValue);

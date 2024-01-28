@@ -5,11 +5,11 @@ using UnityEngine;
 public class SettingsScriptableObject : ScriptableObject
 {
 
-    public delegate void VolumeChanged(int volume);
+    public delegate void VolumeChanged(float volume);
     public event VolumeChanged OnVolumeChanged;
     [SerializeField]
-    private int volume = 100;
-    public int Volume
+    private float volume = 1;
+    public float Volume
     {
         get { return volume; } 
         set
