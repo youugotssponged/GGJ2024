@@ -19,7 +19,7 @@ public class SoundManager : MonoBehaviour
     
     public void StopPlaying() => audioSource.Stop();
 
-    private void AdjustVolume(int currentVolume)
+    private void AdjustVolume(float currentVolume)
     {
         audioSource.volume = currentVolume;
     }

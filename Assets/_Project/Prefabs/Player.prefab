@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 6889782129680934058}
   m_WalkSpeed: 10
-  m_JumpHeight: 10
+  m_JumpHeight: 5
 --- !u!54 &6889782129805137341
 Rigidbody:
   m_ObjectHideFlags: 0
