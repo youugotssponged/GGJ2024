@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/UIStyles.uss?fileID=7433441132597879392&amp;guid=7a0641d5e8037554494fd0fb0ed7d722&amp;type=3#UIStyles" />
+    <ui:VisualElement style="width: 100%; height: 100%; justify-content: center; align-items: center; background-color: rgb(56, 56, 56);">
+        <ui:Label text="How To Play" display-tooltip-when-elided="true" name="HowToPlayLabel" class="LabelStyle LabelBoldStyle SixtyFourFont" />
+        <ui:Label text="Press &apos;E&apos; on doors to knock." display-tooltip-when-elided="true" name="PressELabel" class="LabelStyleSmall RobotoFont" />
+        <ui:Label text="Select the correct punchline for the joke to gain enough points before the time runs out!" display-tooltip-when-elided="true" name="SelectCorrectJoke" class="LabelStyleSmall RobotoFont" />
+        <ui:Label text="Grey doors cannot be opened, so make sure to skip these." display-tooltip-when-elided="true" name="GreyDoors" class="LabelStyleSmall RobotoFont" />
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label text="Green doors" display-tooltip-when-elided="true" name="GreenDoors" class="LabelStyleSmall RobotoFont LabelBoldStyle" style="margin-right: 0; padding-right: 0; color: rgb(41, 214, 69);" />
+            <ui:Label text=" need one correct answer." display-tooltip-when-elided="true" name="GreenDoorsLabel" class="LabelStyleSmall RobotoFont" style="margin-left: 0; padding-left: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label text="Yellow doors" display-tooltip-when-elided="true" name="YellowDoors" class="LabelStyleSmall RobotoFont LabelBoldStyle" style="margin-right: 0; padding-right: 0; color: rgb(214, 210, 41);" />
+            <ui:Label text=" need one correct answer." display-tooltip-when-elided="true" name="GreenDoorsLabel" class="LabelStyleSmall RobotoFont" style="margin-left: 0; padding-left: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label text="Red doors" display-tooltip-when-elided="true" name="RedDoors" class="LabelStyleSmall RobotoFont LabelBoldStyle" style="margin-right: 0; padding-right: 0; color: rgb(229, 66, 67);" />
+            <ui:Label text=" need one correct answer." display-tooltip-when-elided="true" name="GreenDoorsLabel" class="LabelStyleSmall RobotoFont" style="margin-left: 0; padding-left: 0;" />
+        </ui:VisualElement>
+        <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="ButtonStyle" style="margin-top: 24px;" />
+    </ui:VisualElement>
+</ui:UXML>

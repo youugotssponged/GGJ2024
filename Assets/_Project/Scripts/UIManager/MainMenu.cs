@@ -8,11 +8,14 @@ public class MainMenu : MonoBehaviour
     SettingsScriptableObject Settings;
 
     [SerializeField]
+    UIDocument HowToPlayUIDocument;
+    [SerializeField]
     UIDocument SettingsButtonsUIDocument;
     UIDocument StartButtonsUIDocument;
 
     VisualElement StartScreenRoot;
     VisualElement SettingsRoot;
+    VisualElement HowToPlayRoot;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,7 @@ public class MainMenu : MonoBehaviour
         StartButtonsUIDocument = GetComponent<UIDocument>();
         StartScreenRoot = StartButtonsUIDocument.rootVisualElement;
         StartScreenRoot.Q<Button>("StartButton").clicked += StartButton_clicked;
+        StartScreenRoot.Q<Button>("HowToPlayButton").clicked += HowToPlayButton_clicked;
         StartScreenRoot.Q<Button>("SettingsButton").clicked += SettingsButton_clicked;
         StartScreenRoot.Q<Button>("ExitButton").clicked += () => Application.Quit();
 
@@ -31,8 +35,13 @@ public class MainMenu : MonoBehaviour
         // Set values
         SettingsRoot.Q<Slider>("VolumeSlider").value = Settings.Volume;
         // Set events
-        SettingsRoot.Q<Button>("BackButton").clicked += BackButton_clicked;
+        SettingsRoot.Q<Button>("BackButton").clicked += SettingsBackButton_clicked;
         SettingsRoot.Q<Slider>("VolumeSlider").RegisterValueChangedCallback(OnVolumeSliderChangedEvent);
+
+        // Set up How To Play Screen
+        HowToPlayRoot = HowToPlayUIDocument.rootVisualElement;
+        HowToPlayRoot.style.display = DisplayStyle.None;
+        HowToPlayRoot.Q<Button>("BackButton").clicked += HowToPlayBackButton_clicked;
     }
 
     // Start Screen Buttons
@@ -41,7 +50,12 @@ public class MainMenu : MonoBehaviour
         // Start the game by loading the correct scene.
         SceneManager.LoadScene(2);
     }
-
+    private void HowToPlayButton_clicked()
+    {
+        // Hide the default UI, and show settigns UI.
+        StartScreenRoot.style.display = DisplayStyle.None;
+        HowToPlayRoot.style.display = DisplayStyle.Flex;
+    }
     private void SettingsButton_clicked()
     {
         // Hide the default UI, and show settigns UI.
@@ -55,10 +69,16 @@ public class MainMenu : MonoBehaviour
         // Update Scriptable Object storing volume.
         Settings.Volume = evt.newValue;
     }
-    private void BackButton_clicked()
+    private void SettingsBackButton_clicked()
     {
         // Hide Settings, and show start screen buttons.
         SettingsRoot.style.display = DisplayStyle.None;
+        StartScreenRoot.style.display = DisplayStyle.Flex;
+    }
+    private void HowToPlayBackButton_clicked()
+    {
+        // Hide Settings, and show start screen buttons.
+        HowToPlayRoot.style.display = DisplayStyle.None;
         StartScreenRoot.style.display = DisplayStyle.Flex;
     }
 }
