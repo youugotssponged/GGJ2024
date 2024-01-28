@@ -1,22 +1,53 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class DoorManager : MonoBehaviour
 {
-    private List<Door> DoorsInScene;
+    private static List<Door> DoorsInScene;
     
-    void Start()
+    void Awake()
     {
         DoorsInScene = FindObjectsOfType<Door>().ToList();
-        SetDoorColours();
     }
 
-    public void SetDoorColours()
+    public static void SetDoorColours(int quota)
+    {
+        // Minimum or more doors needing to be set to NON BROWN aka NON-Openable
+        List<int> assignedIndexes = new List<int>();
+        // Randomly set difficuly doors - minimum
+        for (int i = 0; i < quota; i++)
+        {
+            int doorNum = RandomNumberGenerator.GetInt32(0, DoorsInScene.Count);
+            if (!assignedIndexes.Contains(doorNum))
+            {
+                int randomColour = RandomNumberGenerator.GetInt32(1, (int)DoorColours.RED + 1);
+                DoorsInScene[doorNum].SetColour((DoorColours)randomColour);
+                assignedIndexes.Add(doorNum);
+            }
+            else
+            {
+                i--;
+            }
+        }
+        
+        foreach (var door in DoorsInScene)
+        {
+            if (!assignedIndexes.Contains(DoorsInScene.IndexOf(door)))
+            {
+                int randomColour = RandomNumberGenerator.GetInt32(0, (int)DoorColours.RED + 1);
+                door.SetColour((DoorColours)randomColour);
+            }
+        }
+    }
+
+    public static void SetAllUnvisited()
     {
         foreach (var door in DoorsInScene)
         {
-            door.SetColour(DoorColours.YELLOW);
+            door.SetUnVisited();
         }
-    }
+    } 
 }

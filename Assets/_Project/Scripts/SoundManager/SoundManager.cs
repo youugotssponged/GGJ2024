@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -6,19 +7,22 @@ public class SoundManager : MonoBehaviour
     private static AudioSource audioSource;
     [SerializeField] private SettingsScriptableObject settingsSO;
 
-    public void Start()
+    public void Awake()
     {
-        if (audioSource == null)
+        audioSource = GetComponent<AudioSource>();
+        settingsSO.OnVolumeChanged += AdjustVolume;
+        if (settingsSO != null)
         {
-            audioSource = GetComponent<AudioSource>();
-            if (settingsSO != null)
-            {
-                audioSource.volume = settingsSO.Volume;
-            }
+            audioSource.volume = settingsSO.Volume;
         }
     }
     
     public void StopPlaying() => audioSource.Stop();
+
+    private void AdjustVolume(int currentVolume)
+    {
+        audioSource.volume = currentVolume;
+    }
 
     public void StopPlayingAndRemoveClip()
     {
@@ -50,5 +54,10 @@ public class SoundManager : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(clip, position);
         }
+    }
+
+    public void OnDestroy()
+    {
+        settingsSO.OnVolumeChanged -= AdjustVolume;
     }
 }

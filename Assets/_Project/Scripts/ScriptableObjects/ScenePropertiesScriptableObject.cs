@@ -4,6 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ScenePropertiesScriptableObject", menuName = "ScriptableObjects/ScenePropertiesScriptableObject", order = 1)]
 public class ScenePropertiesScriptableObject : ScriptableObject
 {
+    public delegate void ZeroSecondsReached();
+    public event ZeroSecondsReached OnZeroSecondsReached;
+    
     public delegate void PausedChanged(bool paused);
     public event PausedChanged OnPausedChanged;
     [SerializeField]
@@ -28,6 +31,12 @@ public class ScenePropertiesScriptableObject : ScriptableObject
         set 
         { 
             secondsRemaining = value;
+
+            if (secondsRemaining == 0)
+            {
+                OnZeroSecondsReached?.Invoke();
+            }
+            
             OnSecondsRemainingChanged?.Invoke(secondsRemaining);
         }
     }

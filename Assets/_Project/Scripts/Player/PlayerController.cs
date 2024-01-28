@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
             if (door != null && Input.GetKeyDown(KeyCode.E) 
                              && !inJokeSession 
                              && !door.Visited
-                             && CurrentDoor == null)
+                             && CurrentDoor == null
+                             && door.SelfColour != DoorColours.GRAY)
             {
 
                 int knockSoundSelection = RandomNumberGenerator.GetInt32(1, 4);
