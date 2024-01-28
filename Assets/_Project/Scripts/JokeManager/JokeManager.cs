@@ -128,13 +128,11 @@ public class JokeManager : MonoBehaviour
             if (SelectedOption == jokesToShow[i].CorrectAnswer)
             {
                 // Continue/Succeed if correct
-                // ToDo play laughing sound
                 Debug.Log("Correct Answer");
                 continue;
             }
             else
             {
-                // ToDo play angry sound
                 Debug.Log("Wrong asnwer");
                 succeeded = false;
                 break;

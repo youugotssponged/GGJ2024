@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,7 @@ public class PauseMenuUIManager : MonoBehaviour
         Root.style.display = DisplayStyle.None;
 
         // Set values
-        // ToDo fix null reference here.
-        //Root.Q<SliderInt>("VolumeSlider").value = Settings.Volume;
-        //Root.Q<SliderInt>("TextSpeedSlider").value = Settings.TextSpeed;
+        Root.Q<SliderInt>("VolumeSlider").value = Settings.Volume;
 
         // Set events
         SceneProperties.OnPausedChanged += (paused) => Root.style.display = paused ? DisplayStyle.Flex : DisplayStyle.None;
@@ -43,6 +42,7 @@ public class PauseMenuUIManager : MonoBehaviour
     private void OnVolumeSliderChangedEvent(ChangeEvent<int> evt)
     {
         // Update Scriptable Object storing volume.
+        Debug.Log(evt.newValue);
         Settings.Volume = evt.newValue;
     }
     private void ReturnToMenuButton_clicked()
