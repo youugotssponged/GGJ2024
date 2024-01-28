@@ -1,5 +1,46 @@
 # GGJ2024
-Global Game Jam 2024 - (Name TBD)
+Global Game Jam 2024 - Papa Jokes!
+
+Papa Jokes - No one out jokes the Papa
+
+A Joke Delivery Game inspired by our team buying Dominoes individually over the Game Jam weekend while trying to figure out what to do based on the theme of "Make me laugh" so we took it seriously!
+
+Your job, is to meet a quota of satisfied, laughing customers before the timer runs out.
+If you succeed, you will start another day working the job you love! (Congrats, it's a 4 day work week!)
+
+Be careful! Not everyone is in a good mood everyday.
+
+Each door's colour will symbolize the Resident's mood.
+
+Grey = Don't go near me
+Green = Happy - Needs 1 Joke
+Yellow = Meh - Needs 2 Jokes
+Red = Angry - Needs 3 Jokes
+
+Ready to serve up some laughs!?
+
+---------------------------------------------------
+---------------------------------------------------
+Credits:
+Niall Davis - Level Designer and 3D Artist.
+Nathan Dewhurst - UI and Systems Programmer
+Connor Flanagan - Music and Sound Effects Artist
+Jordan McCann - Gameplay Programmer
+
+Asset references used in project:
+Majority of level made with Unity's Probuilder and some tweaking from blender.
+
+Player model sourced from mixamo - https://www.mixamo.com/
+
+Skybox sourced from - https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
+
+Scenery - https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-cartoon-mini-pack-free-227405
+
+NPC - https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870
+
+Vehicles - https://assetstore.unity.com/packages/3d/vehicles/land/street-vehicles-pack-autobus-tram-213421
+
+Music entirely scored by Connor Flanagan
 
 
 [![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
