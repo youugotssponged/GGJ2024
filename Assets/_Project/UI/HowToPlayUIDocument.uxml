@@ -11,11 +11,11 @@
         </ui:VisualElement>
         <ui:VisualElement style="flex-direction: row;">
             <ui:Label text="Yellow doors" display-tooltip-when-elided="true" name="YellowDoors" class="LabelStyleSmall RobotoFont LabelBoldStyle" style="margin-right: 0; padding-right: 0; color: rgb(214, 210, 41);" />
-            <ui:Label text=" need one correct answer." display-tooltip-when-elided="true" name="GreenDoorsLabel" class="LabelStyleSmall RobotoFont" style="margin-left: 0; padding-left: 0;" />
+            <ui:Label text=" need two correct answers." display-tooltip-when-elided="true" name="GreenDoorsLabel" class="LabelStyleSmall RobotoFont" style="margin-left: 0; padding-left: 0;" />
         </ui:VisualElement>
         <ui:VisualElement style="flex-direction: row;">
             <ui:Label text="Red doors" display-tooltip-when-elided="true" name="RedDoors" class="LabelStyleSmall RobotoFont LabelBoldStyle" style="margin-right: 0; padding-right: 0; color: rgb(229, 66, 67);" />
-            <ui:Label text=" need one correct answer." display-tooltip-when-elided="true" name="GreenDoorsLabel" class="LabelStyleSmall RobotoFont" style="margin-left: 0; padding-left: 0;" />
+            <ui:Label text=" need three correct answers." display-tooltip-when-elided="true" name="GreenDoorsLabel" class="LabelStyleSmall RobotoFont" style="margin-left: 0; padding-left: 0;" />
         </ui:VisualElement>
         <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="ButtonStyle" style="margin-top: 24px;" />
     </ui:VisualElement>
