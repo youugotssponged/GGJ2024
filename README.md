@@ -29,10 +29,15 @@ Jordan McCann - Gameplay Programmer
 
 Asset references used in project:
 Majority of level made with Unity's Probuilder and some tweaking from blender.
+
 Player model sourced from mixamo - https://www.mixamo.com/
+
 Skybox sourced from - https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
+
 Scenery - https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-cartoon-mini-pack-free-227405
+
 NPC - https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870
+
 Vehicles - https://assetstore.unity.com/packages/3d/vehicles/land/street-vehicles-pack-autobus-tram-213421
 
 Music entirely scored by Connor Flanagan
