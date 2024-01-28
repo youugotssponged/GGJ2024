@@ -3,168 +3,168 @@
 	<Joke>
 		<Setup>What did the ocean say to the beach?</Setup>
 		<Option1>Nothing, it just waved.</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>Hi, how are you?</Option2>
+		<Option3>What's up with airplane food?</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>Why did the scarecrow win an award?</Setup>
-		<Option1></Option1>
-		<Option2></Option2>
+		<Option1>For best hockey player.</Option1>
+		<Option2>They were really nice.</Option2>
 		<Option3>Because he was outstanding in his field.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a fish with no eyes?</Setup>
 		<Option1>Fsh!</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>Fish and a rice cake!</Option2>
+		<Option3>Fishy!</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a deer with no eyes?</Setup>
-		<Option1></Option1>
+		<Option1>A deer.</Option1>
 		<Option2>No idea!</Option2>
-		<Option3></Option3>
+		<Option3>Your pet's name.</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>Did you hear about the restaurant on the moon?</Setup>
-		<Option1></Option1>
-		<Option2></Option2>
+		<Option1>It is very far away.</Option1>
+		<Option2>It has been all over the news!</Option2>
 		<Option3>Great food, but no atmosphere.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>Why did the bicycle fall over?</Setup>
 		<Option1>Because it was two tired.</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>The rider had bad balance.</Option2>
+		<Option3>A wheel fell off.</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a lazy kangaroo?</Setup>
-		<Option1></Option1>
+		<Option1>A lazy animal.</Option1>
 		<Option2>Pouch potato.</Option2>
-		<Option3></Option3>
+		<Option3>Kangaroo Jack</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a cow with no legs?</Setup>
 		<Option1>Ground beef.</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>Sally.</Option2>
+		<Option3>A legless cow.</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a fish with two knees?</Setup>
 		<Option1>A two-knee fish!</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>A kingfish!</Option2>
+		<Option3>A squid!</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What kind of tree fits in your hand?</Setup>
-		<Option1></Option1>
-		<Option2></Option2>
+		<Option1>A tiny tree.</Option1>
+		<Option2>A birch tree.</Option2>
 		<Option3>A palm tree.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What has to be broken before you can use it?</Setup>
-		<Option1></Option1>
+		<Option1>A window.</Option1>
 		<Option2>An egg.</Option2>
-		<Option3></Option3>
+		<Option3>A musical instrument.</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What kind of music do mimes listen to?</Setup>
-		<Option1></Option1>
+		<Option1>Classic rock.</Option1>
 		<Option2>Pantomime.</Option2>
-		<Option3></Option3>
+		<Option3>Opera.</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What is the best thing about Switzerland?</Setup>
 		<Option1>I don't know, but the flag is a big plus.</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>The food.</Option2>
+		<Option3>The people.</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What's blue and smells like red paint?</Setup>
-		<Option1></Option1>
-		<Option2></Option2>
+		<Option1>Blueberries.</Option1>
+		<Option2>The sky.</Option2>
 		<Option3>Blue paint.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What did one wall say to the other wall?</Setup>
-		<Option1></Option1>
+		<Option1>"Lovely weather outside."</Option1>
 		<Option2>"I'll meet you at the corner."</Option2>
-		<Option3></Option3>
+		<Option3>"We are walls."</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What did the grape do when it got stepped on?</Setup>
 		<Option1>Nothing, it just let out a little wine.</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>It got squished.</Option2>
+		<Option3>It went to the hospital.</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>How does a penguin build its house?</Setup>
-		<Option1></Option1>
-		<Option2></Option2>
+		<Option1>By working with other penguins.</Option1>
+		<Option2>By the power of Grayskull!</Option2>
 		<Option3>Igloos it together.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>Why don't scientists trust atoms?</Setup>
-		<Option1></Option1>
+		<Option1>Science can be tricky.</Option1>
 		<Option2>Because they make up everything.</Option2>
-		<Option3></Option3>
+		<Option3>Scientists are just untrusting people.</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you get when you cross a snowman and a vampire?</Setup>
 		<Option1>Frostbite.</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>A nice conversation.</Option2>
+		<Option3>The cold shoulder.</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>Why did the math book look sad?</Setup>
-		<Option1></Option1>
+		<Option1>Because no one likes math.</Option1>
 		<Option2>Because it had too many problems.</Option2>
-		<Option3></Option3>
+		<Option3>Because no one was reading it.</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a can opener that doesn't work?</Setup>
-		<Option1></Option1>
-		<Option2></Option2>
+		<Option1>Useless.</Option1>
+		<Option2>Scrap metal.</Option2>
 		<Option3>A can't opener.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a pile of cats?</Setup>
 		<Option1>A meowtain.</Option1>
-		<Option2></Option2>
-		<Option3></Option3>
+		<Option2>A giant furball.</Option2>
+		<Option3>CUTE OVERLOAD!</Option3>
 		<CorrectAnswer>1</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What did the janitor say when he jumped out of the closet?</Setup>
-		<Option1></Option1>
+		<Option1>Get away from my closet!</Option1>
 		<Option2>Supplies!</Option2>
-		<Option3></Option3>
+		<Option3>What do you need?</Option3>
 		<CorrectAnswer>2</CorrectAnswer>
 	</Joke>
 	<Joke>
 		<Setup>What do you call a fish wearing a bowtie?</Setup>
-		<Option1></Option1>
-		<Option2></Option2>
+		<Option1>Gerald.</Option1>
+		<Option2>Dapper.</Option2>
 		<Option3>Sofishticated.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
