@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public JokeManager jokeManager;
     public JokeScriptableObject jokeSO;
     private bool inJokeSession = false;
-    private IDoorInteractable CurrentDoor = null;
+    public static IDoorInteractable CurrentDoor = null;
 
     private void Start()
     {
@@ -34,17 +34,17 @@ public class PlayerController : MonoBehaviour
             {
 
                 int knockSoundSelection = RandomNumberGenerator.GetInt32(1, 4);
-
+                Door selectedDoor = (Door)door;
                 switch (knockSoundSelection)
                 {
                     case 1:
-                        SoundManager.PlaySoundAt("Knock", transform.position);
+                        SoundManager.PlaySoundAt("Knock", selectedDoor.transform.position);
                         break;
                     case 2:
-                        SoundManager.PlaySoundAt("Doorbell", transform.position);
+                        SoundManager.PlaySoundAt("Doorbell", selectedDoor.transform.position);
                         break;
                     case 3:
-                        SoundManager.PlaySoundAt("Doorbell2", transform.position);
+                        SoundManager.PlaySoundAt("Doorbell2", selectedDoor.transform.position);
                         break;
                 }
                 

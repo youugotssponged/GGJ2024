@@ -161,20 +161,20 @@ public class JokeManager : MonoBehaviour
         if (succeeded)
         {
             int happyPersonSelection = RandomNumberGenerator.GetInt32(1, 5);
-
+            Door currentDoor = (Door)PlayerController.CurrentDoor;
             switch (happyPersonSelection)
             {
                 case 1:
-                    SoundManager.PlaySoundAt("Laugh", transform.position);
+                    SoundManager.PlaySoundAt("Laugh", currentDoor.transform.position);
                     break;
                 case 2:
-                    SoundManager.PlaySoundAt("Laugh2", transform.position);
+                    SoundManager.PlaySoundAt("Laugh2", currentDoor.transform.position);
                     break;
                 case 3:
-                    SoundManager.PlaySoundAt("Laugh3", transform.position);
+                    SoundManager.PlaySoundAt("Laugh3", currentDoor.transform.position);
                     break;
                 case 4:
-                    SoundManager.PlaySoundAt("Laugh4", transform.position);
+                    SoundManager.PlaySoundAt("Laugh4", currentDoor.transform.position);
                     break;
             }
             
@@ -183,14 +183,15 @@ public class JokeManager : MonoBehaviour
         }
         else
         {
+            Door currentDoor = (Door)PlayerController.CurrentDoor;
             int angrySound = RandomNumberGenerator.GetInt32(1, 3);
             switch (angrySound)
             {
                 case 1:
-                    SoundManager.PlaySoundAt("AngryPerson", transform.position);
+                    SoundManager.PlaySoundAt("AngryPerson", currentDoor.transform.position);
                     break;
                 case 2:
-                    SoundManager.PlaySoundAt("AngryPerson2", transform.position);
+                    SoundManager.PlaySoundAt("AngryPerson2", currentDoor.transform.position);
                     break;
             }
         }

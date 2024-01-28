@@ -15,7 +15,6 @@ public class DoorManager : MonoBehaviour
 
     public static void SetDoorColours(int quota)
     {
-        // Minimum or more doors needing to be set to NON BROWN aka NON-Openable
         List<int> assignedIndexes = new List<int>();
         // Randomly set difficuly doors - minimum
         for (int i = 0; i < quota; i++)
