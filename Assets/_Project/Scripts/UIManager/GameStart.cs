@@ -7,6 +7,11 @@ public class GameStart : MonoBehaviour
 {
     [SerializeField]
     ScenePropertiesScriptableObject SceneProperties;
+
+    CursorLockMode PrePause_CursorLockState = CursorLockMode.None;
+    bool PrePause_AllowedToMove = true;
+    bool PrePause_StopMouseMovement = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +22,14 @@ public class GameStart : MonoBehaviour
 
     private void OnPausedChanged(bool paused)
     {
+        Debug.Log("Pause Changed in game start");
         if (SceneProperties.Paused)
         {
             Time.timeScale = 0;
+            PrePause_CursorLockState = Cursor.lockState;
+            PrePause_AllowedToMove = Movement.AllowedToMove;
+            PrePause_StopMouseMovement = MouseLook.StopMouseMovement;
+
             MouseLook.SetCursorLockState(false);
             Movement.StopMovement();
             MouseLook.SetMouseMovementOff();
@@ -27,9 +37,32 @@ public class GameStart : MonoBehaviour
         else
         {
             Time.timeScale = 1;
-            MouseLook.SetCursorLockState(true);
-            Movement.StartMovement();
-            MouseLook.SetMouseMovementOn();
+            if (PrePause_CursorLockState == CursorLockMode.Locked)
+            {
+                MouseLook.SetCursorLockState(true);
+            }
+            else
+            {
+                MouseLook.SetCursorLockState(false);
+            }
+
+            if (PrePause_AllowedToMove)
+            {
+                Movement.StartMovement();
+            }
+            else
+            {
+                Movement.StopMovement();
+            }
+
+            if (PrePause_StopMouseMovement)
+            {
+                MouseLook.SetMouseMovementOff();
+            }
+            else
+            {
+                MouseLook.SetMouseMovementOn();
+            }
         }
     }
 

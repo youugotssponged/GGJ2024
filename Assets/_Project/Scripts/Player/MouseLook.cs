@@ -11,13 +11,12 @@ public class MouseLook : MonoBehaviour
     private Vector2 m_MouseLook;
     private Vector2 m_SmoothingVector;
     
-    private bool CursorIsLocked;
-    private static bool StopMouseMovement = false;
+    public static bool CursorIsLocked = true;
+    public static bool StopMouseMovement = false;
     
     
     private void Start()
     {
-        CursorIsLocked = true;
         SetCursorLockState(CursorIsLocked);
     }
 

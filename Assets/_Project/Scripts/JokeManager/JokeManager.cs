@@ -35,6 +35,7 @@ public class JokeManager : MonoBehaviour
     Button Option1Button;
     Button Option2Button;
     Button Option3Button;
+    bool CurrentlyDisplayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,8 +51,24 @@ public class JokeManager : MonoBehaviour
         Option2Button.clicked += Option2Button_clicked;
         Option3Button.clicked += Option3Button_clicked;
 
+        SceneProperties.OnPausedChanged += SceneProperties_OnPausedChanged;
+        
+
         LoadJokes();
     }
+
+    private void SceneProperties_OnPausedChanged(bool paused)
+    {
+        if (paused)
+        {
+            Root.style.display = DisplayStyle.None;
+        }
+        else
+        {
+            Root.style.display = CurrentlyDisplayed ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+    }
+
     void LoadJokes()
     {
         string jokesXmlPath = $@"{Application.streamingAssetsPath}\Jokes.xml";
@@ -115,6 +132,7 @@ public class JokeManager : MonoBehaviour
             Option2Button.text = jokesToShow[i].Option2;
             Option3Button.text = jokesToShow[i].Option3;
 
+            CurrentlyDisplayed = true;
             Root.style.display = DisplayStyle.Flex;
 
             // wait for selection by the player
@@ -179,6 +197,7 @@ public class JokeManager : MonoBehaviour
 
         // Hide and reset UI
         Root.style.display = DisplayStyle.None;
+        CurrentlyDisplayed = false;
         // Return control to player
         JokeSO.OnJokeFinished?.Invoke();
     }
