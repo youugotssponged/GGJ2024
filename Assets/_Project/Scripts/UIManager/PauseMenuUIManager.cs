@@ -35,7 +35,7 @@ public class PauseMenuUIManager : MonoBehaviour
     {
         Debug.Log("Resume button clicked.");
         SceneProperties.Paused = !SceneProperties.Paused;
-        MouseLook.SetCursorLockState(true);
+        //MouseLook.SetCursorLockState(true);
     }
 
     // Settings

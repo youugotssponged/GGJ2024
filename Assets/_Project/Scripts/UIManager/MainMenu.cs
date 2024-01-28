@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.PlayTheme("MainMenuMusic", true);
         // Setting up StartScreen button events
         StartButtonsUIDocument = GetComponent<UIDocument>();
         StartScreenRoot = StartButtonsUIDocument.rootVisualElement;
