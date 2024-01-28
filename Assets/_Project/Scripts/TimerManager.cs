@@ -36,8 +36,11 @@ public class TimerManager : MonoBehaviour
                     // ToDo
                 }
             }
+            else
+            {
+                SceneProperties.SecondsRemaining--;
+            }
             yield return new WaitForSeconds(1f);
-            SceneProperties.SecondsRemaining--;
         }
     }
 
