@@ -5,7 +5,7 @@ using Debug = UnityEngine.Debug;
 
 public enum DoorColours
 {
-    BROWN = 0,
+    GRAY = 0,
     GREEN = 1,
     YELLOW = 2,
     RED = 3,
@@ -29,6 +29,7 @@ public class Door : MonoBehaviour, IDoorInteractable
     public bool Visited => _visited;
 
     public void SetVisited() => _visited = true;
+    public void SetUnVisited() => _visited = false;
 
     private bool Open { get; set; } = false;
 
@@ -39,8 +40,8 @@ public class Door : MonoBehaviour, IDoorInteractable
             DoorColours.YELLOW => Color.yellow,
             DoorColours.GREEN => Color.green,
             DoorColours.RED => Color.red,
-            DoorColours.BROWN => new Color(160,82,45),
-            _ => new Color(160,82,45)
+            DoorColours.GRAY => Color.gray,
+            _ => Color.gray
         };
         
         _selfColour = doorColour;
