@@ -9,6 +9,8 @@ public class TimerManager : MonoBehaviour
 {
     [SerializeField]
     ScenePropertiesScriptableObject SceneProperties;
+    [SerializeField]
+    PlayerController PlayerController;
     bool ContinueTimer = true;
 
     // Start is called before the first frame update
@@ -27,6 +29,12 @@ public class TimerManager : MonoBehaviour
                 if (SceneProperties.CurrentScore < SceneProperties.RequiredScore)
                 {
                     ContinueTimer = false;
+                    PlayerController.inJokeSession = false;
+                    if (PlayerController.CurrentDoor != null)
+                    {
+                        PlayerController.CurrentDoor.OpenClose();
+                        PlayerController.CurrentDoor = null;
+                    }
                     MouseLook.SetCursorLockState(false);
                     SceneManager.LoadScene(4);
                 }
