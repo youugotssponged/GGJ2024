@@ -35,7 +35,7 @@ public class JokeManager : MonoBehaviour
     Button Option1Button;
     Button Option2Button;
     Button Option3Button;
-    bool CurrentlyDisplayed = false;
+    public bool CurrentlyDisplayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -184,15 +184,18 @@ public class JokeManager : MonoBehaviour
         else
         {
             Door currentDoor = (Door)PlayerController.CurrentDoor;
-            int angrySound = RandomNumberGenerator.GetInt32(1, 3);
-            switch (angrySound)
+            if (currentDoor != null)
             {
-                case 1:
-                    SoundManager.PlaySoundAt("AngryPerson", currentDoor.transform.position);
-                    break;
-                case 2:
-                    SoundManager.PlaySoundAt("AngryPerson2", currentDoor.transform.position);
-                    break;
+                int angrySound = RandomNumberGenerator.GetInt32(1, 3);
+                switch (angrySound)
+                {
+                    case 1:
+                        SoundManager.PlaySoundAt("AngryPerson", currentDoor.transform.position);
+                        break;
+                    case 2:
+                        SoundManager.PlaySoundAt("AngryPerson2", currentDoor.transform.position);
+                        break;
+                }
             }
         }
 

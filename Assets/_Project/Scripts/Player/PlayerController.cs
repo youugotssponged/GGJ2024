@@ -9,8 +9,13 @@ public class PlayerController : MonoBehaviour
     private Movement movement;
     public JokeManager jokeManager;
     public JokeScriptableObject jokeSO;
-    private bool inJokeSession = false;
+    public bool inJokeSession = false;
     public static IDoorInteractable CurrentDoor = null;
+
+    private void Awake()
+    {
+        inJokeSession = false;
+    }
 
     private void Start()
     {
@@ -65,8 +70,11 @@ public class PlayerController : MonoBehaviour
         MouseLook.SetCursorLockState(true);
         MouseLook.SetMouseMovementOn();
         Movement.StartMovement();
-        CurrentDoor.OpenClose();
-        CurrentDoor.SetVisited();
+        if (CurrentDoor != null)
+        {
+            CurrentDoor.OpenClose();
+            CurrentDoor.SetVisited();
+        }
         jokeSO.OnJokeFinished -= ResumePlayer;
         
         inJokeSession = false;

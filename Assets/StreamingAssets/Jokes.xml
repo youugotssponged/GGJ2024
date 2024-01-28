@@ -168,4 +168,228 @@
 		<Option3>Sofishticated.</Option3>
 		<CorrectAnswer>3</CorrectAnswer>
 	</Joke>
+  <Joke>
+    <Setup>What do you call a blind dinosaur?</Setup>
+    <Option1>Extinct.</Option1>
+    <Option2>Do-you-think-he-saurus.</Option2>
+		<Option3>Geoff.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What do you call a fake noodle?</Setup>
+    <Option1>Dinner.</Option1>
+    <Option2>Hidden carbs.</Option2>
+		<Option3>An impasta!</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What did the mama cow say to the calf?</Setup>
+    <Option1>It's pasture bedtime.</Option1>
+    <Option2>Eat your vegetables.</Option2>
+		<Option3>It's bedtime.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What did one plate say to the other?</Setup>
+    <Option1>Nice to see you again.</Option1>
+    <Option2>Dinner's on me.</Option2>
+		<Option3>Nothing, they're plates.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>How does a vampire start a letter?</Setup>
+    <Option1>Dear [NAME],</Option1>
+    <Option2>I hope this letter finds you well,</Option2>
+		<Option3>Tomb it may concern,</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What do you get when you cross a kangaroo with a sheep?</Setup>
+    <Option1>A woolly jumper.</Option1>
+    <Option2>A biological monstrosity.</Option2>
+		<Option3>A medical marvel.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why can't you hear a pterodactyl going to the bathroom?</Setup>
+    <Option1>Because they're extinct.</Option1>
+    <Option2>Because they go in the air.</Option2>
+		<Option3>Because the 'P' is silent.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What do you call a well balanced horse?</Setup>
+    <Option1>Stable.</Option1>
+    <Option2>Henry.</Option2>
+		<Option3>Healthy.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What do the dog say when it sat in sandpaper?</Setup>
+    <Option1>Ouch!</Option1>
+    <Option2>Who put this here?</Option2>
+		<Option3>Ruff.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Where do polar bears keep their money?</Setup>
+    <Option1>A snow bank.</Option1>
+    <Option2>Nowhere, they're polar bears.</Option2>
+		<Option3>Santander.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why do bees have sticky hair?</Setup>
+    <Option1>Too much pollen.</Option1>
+    <Option2>They use honey combs.</Option2>
+		<Option3>To ward off predators.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What would bears be without bees?</Setup>
+    <Option1>Ears.</Option1>
+    <Option2>Honeyless.</Option2>
+		<Option3>They would be no different.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why do cows wear bells?</Setup>
+    <Option1>To alert pedestrians to their whereabouts.</Option1>
+    <Option2>Because their horns don't work.</Option2>
+		<Option3>So farmers know where they are.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What do astronauts do before throwing a party?</Setup>
+    <Option1>They planet.</Option1>
+    <Option2>Buy streamers.</Option2>
+		<Option3>Find a suitable cake.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Where was King David's temple located?</Setup>
+    <Option1>Syria.</Option1>
+    <Option2>Jordan.</Option2>
+		<Option3>Right next to his ear.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why are balloons so expensive?</Setup>
+    <Option1>Inflation.</Option1>
+    <Option2>Helium ain't free.</Option2>
+		<Option3>The cost of living crisis.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What's red and bad for your teeth?</Setup>
+    <Option1>A brick.</Option1>
+    <Option2>Red velvet cake.</Option2>
+		<Option3>Red food colouring.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why can't you tell an egg a joke?</Setup>
+    <Option1>Because eggs aren't people.</Option1>
+    <Option2>They won't find it funny.</Option2>
+		<Option3>It'll crack up.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Did you hear about the child that drank 8 sodas?</Setup>
+    <Option1>He got really hyper.</Option1>
+    <Option2>He burped 7 up.</Option2>
+		<Option3>He had a sugar crash.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>How many tickles does it take to make an octopus laugh?</Setup>
+    <Option1>Seven.</Option1>
+    <Option2>None, octopuses can't laugh.</Option2>
+		<Option3>Ten-tickles.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>How does the moon cut his hair?</Setup>
+    <Option1>Eclipse it.</Option1>
+    <Option2>The moon doesn't have hair.</Option2>
+		<Option3>He goes to the barber.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>How did the telephone propose to his girlfriend?</Setup>
+    <Option1>He got down on one knee.</Option1>
+    <Option2>He asked her politely.</Option2>
+		<Option3>He gave her a ring.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why did the mobile phone get glasses?</Setup>
+    <Option1>He noticed a drop in his vision.</Option1>
+    <Option2>He lost all of his contacts.</Option2>
+		<Option3>He camera was always blurry.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What runs around a baseball field but never moves?</Setup>
+    <Option1>The umpire.</Option1>
+    <Option2>A fence.</Option2>
+		<Option3>The ball.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What do you get when you cross a fish and an elephant?</Setup>
+    <Option1>Swimming trunks.</Option1>
+    <Option2>A medium sized animal.</Option2>
+		<Option3>The start of Jurassic Park(TM)</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why can't a nose be 12 inches long?</Setup>
+    <Option1>It would fall off.</Option1>
+    <Option2>The person would fall over.</Option2>
+		<Option3>Because then it would be a foot.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What do you call a magician who loses his magic?</Setup>
+    <Option1>A bad magician.</Option1>
+    <Option2>A fake.</Option2>
+		<Option3>Ian.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>What did the cake say to the fork?</Setup>
+    <Option1>Ouch.</Option1>
+    <Option2>You want a piece of me?</Option2>
+		<Option3>Nothing, it's a cake.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why don't astronomers like Orion's belt?</Setup>
+    <Option1>It's a big waist of space.</Option1>
+    <Option2>It's the most boring constellation.</Option2>
+		<Option3>What's Orion's belt?</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why do cows have hooves and not feet?</Setup>
+    <Option1>Because they lactose.</Option1>
+    <Option2>Because they just do.</Option2>
+		<Option3>Because evolution.</Option3>
+    <CorrectAnswer>1</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>Why are spiders so smart?</Setup>
+    <Option1>They're always catching flies.</Option1>
+    <Option2>They studied hard at school.</Option2>
+		<Option3>They can find everything on the web.</Option3>
+    <CorrectAnswer>3</CorrectAnswer>
+  </Joke>
+	<Joke>
+    <Setup>When do ducks wake up?</Setup>
+    <Option1>In the morning.</Option1>
+    <Option2>At the quack of dawn.</Option2>
+		<Option3>In the afternoon.</Option3>
+    <CorrectAnswer>2</CorrectAnswer>
+  </Joke>
 </ArrayOfJoke>

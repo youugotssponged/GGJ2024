@@ -4,17 +4,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     public ScenePropertiesScriptableObject ScenePropertiesSO;
+    public JokeScriptableObject JokeSO;
     public GameObject TransitionCanvas; // For enabling / Disabling
-    public Image TransitionPanel; // For fading in and out of black
+    public UnityEngine.UI.Image TransitionPanel; // For fading in and out of black
     public TMP_Text WhiteboardQuotaText;
     public TMP_Text WhiteboardDayText;
     
     public GameObject Player;
     public Transform SpawnPointForPlayer;
+    public UIDocument JokeUI;
     
     private int CurrentDay = 1;
     
@@ -68,34 +71,46 @@ public class GameManager : MonoBehaviour
         ScenePropertiesSO.RequiredScore = newQuota;
         ScenePropertiesSO.SecondsRemaining = newSeconds;
         Player.transform.position = SpawnPointForPlayer.position;
+        var playerController = Player.GetComponent<PlayerController>();
+        playerController.inJokeSession = false;
+        if (PlayerController.CurrentDoor != null)
+        {
+            PlayerController.CurrentDoor.OpenClose();
+            PlayerController.CurrentDoor = null;
+        }
+        // Hide and reset UI
+        JokeUI.rootVisualElement.style.display = DisplayStyle.None;
+        var jokeManager = JokeUI.GetComponentInParent<JokeManager>();
+        jokeManager.CurrentlyDisplayed = false;
+        JokeSO.OnJokeFinished?.Invoke();
         WhiteboardQuotaText.text = newQuota.ToString();
         WhiteboardDayText.text = CurrentDay.ToString();
     }
     
     public void StartDay1()
     {
-        LevelChange(5, 55);
+        LevelChange(5, 65);
         SoundManager.PlayTheme("LevelTheme1", true);
         FadeInVoid();
     }
 
     public async void StartDay2()
     {
-        LevelChange(5, 55);
+        LevelChange(10, 110);
         SoundManager.PlayTheme("LevelTheme2", true);
         await FadeIn();
     }
 
     public async void StartDay3()
     {
-        LevelChange(5, 55);
+        LevelChange(20, 200);
         SoundManager.PlayTheme("LevelTheme3", true);
         await FadeIn();
     }
 
     public async void StartDay4()
     { 
-        LevelChange(5, 40);
+        LevelChange(25, 225);
         SoundManager.PlayTheme("LevelTheme4", true);
         await FadeIn();
     }
